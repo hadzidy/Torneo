@@ -9,6 +9,12 @@ block content
 	//{"equipo6": {"cap": "raul", "num": "6", "name": "Equipo 6"}}
 	- pg = "Partidos Ganados"
 	- pl = "Partidos Perdidos"
+	- e1 = "Marce y SPDP"
+	- e2 = "Altos Boludos"
+	- e3 = "Back2DPigeons"
+	- e4 = "Esta"
+	- e5 = "Los Galletas"
+	- e6 = "Equipo 6" 
 	nav.navbar.navbar-custom.navbar-fixed-top(role='navigation').col
 		.container
 			.navbar-header.page-scroll
@@ -36,7 +42,8 @@ block content
 			.cuadCal
 		.columnas-12.menu-partidos-week
 			ul
-				br 
+				br
+				li.no-gutter.estatic.prox PARTIDOS DE LA SEMANA: 
 				li.no-gutter
 					.cont_hover 
 						.lun.cuadro_contenido 16 
@@ -48,9 +55,9 @@ block content
 								| 19:30 hrs
 								| 20:30 hrs
 								| 21:30 hrs
-							.equiposVS(style="white-space:pre").float-R
-								| Equipo 1 vs Equipo2
-								| Equipo 1 vs Equipo2
+							.equiposVS.float-R(style="white-space:pre")
+								| Marce Y SPDP vs Altos Boludos
+								| Back2DPigeons vs Esta
 								| Equipo 1 vs Equipo2
 				li.no-gutter
 					.cont_hover
@@ -149,7 +156,7 @@ block content
 								h4.modal-title#myModalLabel About team
 							.modal-body#ckTeam		
 								img(src="img/ck.png").team-pic
-								h3 Marce Y SPDP
+								h3= e1
 								p Marcela / Jader / Javi / Pablo / Robert
 								.float-L.partidos= pg
 									.score 0
@@ -166,7 +173,7 @@ block content
 								h4.modal-title#myModalLabel About team
 							.modal-body#darioTeam
 								img(src="img/dario.png").team-pic
-								h3 Altos Boludos
+								h3= e2
 								p Tamara / Xac / Aldo / Charly B / Greco / Montoya
 								.float-L.partidos= pg
 									.score 0
@@ -183,7 +190,7 @@ block content
 								h4.modal-title#myModalLabel About team
 							.modal-body#alanTeam
 								img(src="img/alan.png").team-pic
-								h3 Back2DPigeons
+								h3= e3
 								p Hadzidy / Marissa / Fide / Ulises / Yushell / Zpectrito
 								.float-L.partidos= pg
 									.score 0
@@ -200,7 +207,7 @@ block content
 								h4.modal-title#myModalLabel About team
 							.modal-body#fyrTeam
 								img(src="img/fyr.png").team-pic
-								h3 Esta
+								h3= e4
 								p Cecy / Mariel / Gabo / Licea / Wolf / Zacatenco
 								.float-L.partidos= pg
 									.score 0
@@ -217,7 +224,7 @@ block content
 								h4.modal-title#myModalLabel About team
 							.modal-body#ozzTeam
 								img(src="img/ozz.png").team-pic
-								h3 Los Galletas
+								h3= e5
 								p Juanita / Maru / Martín / Matt / Mike / Redo
 								.float-L.partidos= pg
 									.score 0
@@ -234,7 +241,7 @@ block content
 								h4.modal-title#myModalLabel About team
 							.modal-body#raulTeam
 								img(src="img/raul.png").team-pic
-								h3 Equipo 6
+								h3= e6
 								p Mariana / Adrián / Joel / Pingo / Pollito / Roco
 								.float-L.partidos= pg
 									.score 0
