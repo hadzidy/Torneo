@@ -1,0 +1,247 @@
+extends _layout
+
+block content
+	//{"equipo1": {"cap": "ck", "num": "1", "name": "Marce Y SPDP"}}
+	//{"equipo2": {"cap": "dario", "num": "2", "name": "Marce Y SPDP"}}	
+	//{"equipo3": {"cap": "alan", "num": "3", "name": "Back2DPigeons"}}
+	//{"equipo4": {"cap": "fyr", "num": "4", "name": "Esta"}}
+	//{"equipo5": {"cap": "ozz", "num": "5", "name": "Las Galletas"}}
+	//{"equipo6": {"cap": "raul", "num": "6", "name": "Equipo 6"}}
+	- pg = "Partidos Ganados"
+	- pl = "Partidos Perdidos"
+	nav.navbar.navbar-custom.navbar-fixed-top(role='navigation').col
+		.container
+			.navbar-header.page-scroll
+				button(type="button" data-toggle="collapse" data-target=".navbar-main-collapse").navbar-toggle.collapsed
+					i.fa.fa-bars
+				a.navbar-brand(href="#page-top")
+					i.head-logo
+						img(src="img/grwpo.png")
+			.collapse.navbar-collapse.navbar-right.navbar-main-collapse
+				ul.nav.navbar-nav 
+					li.hidden 
+						a(href='#page-top')
+					li.page-scroll
+						a(href='#page-top') About
+					li.page-scroll
+						a(href='#calendario') Calendario
+					li.page-scroll
+						a(href='#equipos') Equipos
+	section#home.al100.total-container.page-scroll
+		.containerNt.outer-container
+			.title(style="white-space:pre")
+			br
+			a.btn(href="#calendario")
+				i.fa.fa-angle-down.animated
+			.cuadCal
+		.columnas-12.menu-partidos-week
+			ul
+				br 
+				li.no-gutter
+					.cont_hover 
+						.lun.cuadro_contenido 16 
+							br 
+							.mes.float-L JUNIO
+							.dia.float-R LUNES
+							hr
+							.horariosXdia(style="white-space:pre").float-L 
+								| 19:30 hrs
+								| 20:30 hrs
+								| 21:30 hrs
+							.equiposVS(style="white-space:pre").float-R
+								| Equipo 1 vs Equipo2
+								| Equipo 1 vs Equipo2
+								| Equipo 1 vs Equipo2
+				li.no-gutter
+					.cont_hover
+						.mar.cuadro_contenido 17
+							br 
+							.mes.float-L JUNIO 
+							.dia.float-R MARTES
+							hr
+							.horariosXdia(style="white-space:pre").float-L 
+								| 19:30 hrs
+								| 20:30 hrs
+								| 21:30 hrs
+							.equiposVS(style="white-space:pre").float-R
+								| Equipo 1 vs Equipo2
+								| Equipo 1 vs Equipo2
+								| Equipo 1 vs Equipo2
+				li.no-gutter
+					.cont_hover
+						.jue.cuadro_contenido 18
+							br 
+							.mes.float-L JUNIO 
+							.dia.float-R JUEVES
+							hr
+							.horariosXdia(style="white-space:pre").float-L
+								| 19:30 hrs
+								| 20:30 hrs
+								| 21:30 hrs
+							.equiposVS(style="white-space:pre").float-R
+								| Equipo 1 vs Equipo2
+								| Equipo 1 vs Equipo2
+								| Equipo 1 vs Equipo2
+	section#calendario.al100.page-scroll
+		.container.content-section.text-center
+			.row
+				.col-lg-8.col-lg-offset-2
+					h2 Calendario
+					p Lorem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lalaem ipsum la lala
+	section#equipos.al100
+		.container.text-center
+			.row
+				.col-lg-12
+					.span3.contTeams.float-L
+						p LOS EQUIPOS
+						center
+							.col-xs-12.col-sm-4.col-md-2
+								.cuadro_intro_hover.ckMenu
+									.caption
+										.blur
+										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal1") CK
+											p.name-T Marce y SPDP
+												.ver-completo Ver equipo completo
+							.col-xs-12.col-sm-4.col-md-2
+								.cuadro_intro_hover.darioMenu
+									.caption
+										.blur
+										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal2") DARIO
+											p.name-T Altos Boludos
+												.ver-completo Ver equipo completo
+							.col-xs-12.col-sm-4.col-md-2
+								.cuadro_intro_hover.alanMenu
+									.caption
+										.blur
+										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal3") ALAN
+											p.name-T Back2DPigeons
+												.ver-completo Ver equipo completo
+							.col-xs-12.col-sm-4.col-md-2
+								.cuadro_intro_hover.fyrMenu
+									.caption
+										.blur
+										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal4") FYR
+											p.name-T Esta
+												.ver-completo Ver equipo completo
+							.col-xs-12.col-sm-4.col-md-2
+								.cuadro_intro_hover.ozzMenu
+									p
+										img(src="img/ozz.png" alt="").img-responsive
+									.caption
+										.blur
+										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal5") OZZ
+											p.name-T Los Galletas
+												.ver-completo Ver equipo completo
+							.col-xs-12.col-sm-4.col-md-2
+								.cuadro_intro_hover.raulMenu
+									p
+										img(src="img/ozz.png" alt="").img-responsive
+									.caption
+										.blur
+										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal6") RAUL	
+											p.name-T Equipo 6
+												.ver-completo Ver equipo completo
+				.modal.fade#myModal1(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+					.modal-dialog.caja-flotante
+						.modal-content.noRoundBorders
+							.modal-header
+								button(type="button" data-dismiss="modal" aria-hidden="true").close
+								h4.modal-title#myModalLabel About team
+							.modal-body#ckTeam		
+								img(src="img/ck.png").team-pic
+								h3 Marce Y SPDP
+								p Marcela / Jader / Javi / Pablo / Robert
+								.float-L.partidos= pg
+									.score 0
+								.float-R.partidos= pl
+									.score 0  
+							.modal-footer
+								center
+									button(type="button" data-dismiss="modal").btn.btn-default Cerrar
+				.modal.fade#myModal2(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+					.modal-dialog
+						.modal-content.noRoundBorders
+							.modal-header
+								button(type="button" data-dismiss="modal" aria-hidden="true").close
+								h4.modal-title#myModalLabel About team
+							.modal-body#darioTeam
+								img(src="img/dario.png").team-pic
+								h3 Altos Boludos
+								p Tamara / Xac / Aldo / Charly B / Greco / Montoya
+								.float-L.partidos= pg
+									.score 0
+								.float-R.partidos= pl
+									.score 0 
+							.modal-footer
+								center
+									button(type="button" data-dismiss="modal").btn.btn-default Cerrar
+				.modal.fade#myModal3(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+					.modal-dialog
+						.modal-content.noRoundBorders
+							.modal-header
+								button(type="button" data-dismiss="modal" aria-hidden="true").close
+								h4.modal-title#myModalLabel About team
+							.modal-body#alanTeam
+								img(src="img/alan.png").team-pic
+								h3 Back2DPigeons
+								p Hadzidy / Marissa / Fide / Ulises / Yushell / Zpectrito
+								.float-L.partidos= pg
+									.score 0
+								.float-R.partidos= pl
+									.score 0 
+							.modal-footer
+								center
+									button(type="button" data-dismiss="modal").btn.btn-default Cerrar
+				.modal.fade#myModal4(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+					.modal-dialog
+						.modal-content.noRoundBorders
+							.modal-header
+								button(type="button" data-dismiss="modal" aria-hidden="true").close
+								h4.modal-title#myModalLabel About team
+							.modal-body#fyrTeam
+								img(src="img/fyr.png").team-pic
+								h3 Esta
+								p Cecy / Mariel / Gabo / Licea / Wolf / Zacatenco
+								.float-L.partidos= pg
+									.score 0
+								.float-R.partidos= pl
+									.score 0  
+							.modal-footer
+								center
+									button(type="button" data-dismiss="modal").btn.btn-default Cerrar
+				.modal.fade#myModal5(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+					.modal-dialog
+						.modal-content.noRoundBorders
+							.modal-header
+								button(type="button" data-dismiss="modal" aria-hidden="true").close
+								h4.modal-title#myModalLabel About team
+							.modal-body#ozzTeam
+								img(src="img/ozz.png").team-pic
+								h3 Los Galletas
+								p Juanita / Maru / Martín / Matt / Mike / Redo
+								.float-L.partidos= pg
+									.score 0
+								.float-R.partidos= pl
+									.score 0 
+							.modal-footer
+								center
+									button(type="button" data-dismiss="modal").btn.btn-default Cerrar
+				.modal.fade#myModal6(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+					.modal-dialog
+						.modal-content.noRoundBorders
+							.modal-header
+								button(type="button" data-dismiss="modal" aria-hidden="true").close
+								h4.modal-title#myModalLabel About team
+							.modal-body#raulTeam
+								img(src="img/raul.png").team-pic
+								h3 Equipo 6
+								p Mariana / Adrián / Joel / Pingo / Pollito / Roco
+								.float-L.partidos= pg
+									.score 0
+								.float-R.partidos= pl
+									.score 0 
+							.modal-footer
+								center
+									button(type="button" data-dismiss="modal").btn.btn-default Cerrar
+
+

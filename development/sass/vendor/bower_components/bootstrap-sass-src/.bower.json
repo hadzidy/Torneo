@@ -1,0 +1,25 @@
+{
+  "name": "bootstrap-sass-src",
+  "version": "3.0.2",
+  "description": "SASS Bootstrap sources",
+  "main": [
+    "./sass/*",
+    "./fonts/*"
+  ],
+  "ignore": [
+    "**/.*",
+    "*.md",
+    "component.json"
+  ],
+  "homepage": "https://github.com/h2non/bootstrap-sass-src",
+  "_release": "3.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.0.2",
+    "commit": "efe45f5d25ff3833d775266629099ded87ebdad6"
+  },
+  "_source": "git://github.com/h2non/bootstrap-sass-src.git",
+  "_target": "~3.0.2",
+  "_originalSource": "bootstrap-sass-src",
+  "_direct": true
+}

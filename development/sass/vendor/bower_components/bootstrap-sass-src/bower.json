@@ -1,0 +1,11 @@
+{
+  "name": "bootstrap-sass-src",
+  "version": "3.0.21",
+  "description": "SASS Bootstrap sources",
+  "main": ["./sass/*", "./fonts/*"],
+  "ignore": [
+      "**/.*",
+      "*.md",
+      "component.json"
+  ]
+}
