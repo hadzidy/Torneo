@@ -1,20 +1,14 @@
 extends _layout
 
 block content
-	//{"equipo1": {"cap": "ck", "num": "1", "name": "Marce Y SPDP"}}
-	//{"equipo2": {"cap": "dario", "num": "2", "name": "Marce Y SPDP"}}	
-	//{"equipo3": {"cap": "alan", "num": "3", "name": "Back2DPigeons"}}
-	//{"equipo4": {"cap": "fyr", "num": "4", "name": "Esta"}}
-	//{"equipo5": {"cap": "ozz", "num": "5", "name": "Las Galletas"}}
-	//{"equipo6": {"cap": "raul", "num": "6", "name": "Equipo 6"}}
-	- pg = "Partidos Ganados"
-	- pl = "Partidos Perdidos"
-	- e1 = "Marce y SPDP"
-	- e2 = "Altos Boludos"
-	- e3 = "Back2DPigeons"
-	- e4 = "Esta"
-	- e5 = "Los Galletas"
-	- e6 = "Equipo 6" 
+	- equipo1 = {cap: "ck", num: "1", name: "Marce Y SPDP"}
+	- equipo2 = {cap: "dario", num: "2", name: "Altos Boludos"}
+	- equipo3 = {cap: "alan", num: "3", name: "Back2DPigeons"}
+	- equipo4 = {cap: "fyr", num: "4", name: "Esta"}
+	- equipo5 = {cap: "ozz", num: "5", name: "Las Galletas"}
+	- equipo6 = {cap: "raul", num: "6", name: "Equipo 6"}
+	- pg = 'Partidos Ganados'
+	- pl = 'Partidos Perdidos'
 	nav.navbar.navbar-custom.navbar-fixed-top(role='navigation').col
 		.container
 			.navbar-header.page-scroll
@@ -52,13 +46,22 @@ block content
 							.dia.float-R LUNES
 							hr
 							.horariosXdia(style="white-space:pre").float-L 
-								| 19:30 hrs
+								| 19:30 hrs 
 								| 20:30 hrs
 								| 21:30 hrs
-							.equiposVS.float-R(style="white-space:pre")
-								| Marce Y SPDP vs Altos Boludos
-								| Back2DPigeons vs Esta
-								| Equipo 1 vs Equipo2
+							table.equiposVS.float-R
+								tr
+									td.line #{equipo1.name}  
+									td.line vs  
+									td.line #{equipo2.name}
+								tr
+									td.line #{equipo3.name}  
+									td.line vs  
+									td.line #{equipo4.name}
+								tr
+									td.line #{equipo5.name}  
+									td.line vs  
+									td.line #{equipo6.name}
 				li.no-gutter
 					.cont_hover
 						.mar.cuadro_contenido 17
@@ -70,10 +73,19 @@ block content
 								| 19:30 hrs
 								| 20:30 hrs
 								| 21:30 hrs
-							.equiposVS(style="white-space:pre").float-R
-								| Equipo 1 vs Equipo2
-								| Equipo 1 vs Equipo2
-								| Equipo 1 vs Equipo2
+							table.equiposVS.float-R
+								tr
+									td.line #{equipo4.name}  
+									td.line vs  
+									td.line #{equipo5.name}
+								tr
+									td.line #{equipo2.name}  
+									td.line vs  
+									td.line #{equipo6.name}
+								tr
+									td.line #{equipo1.name}  
+									td.line vs  
+									td.line #{equipo3.name}
 				li.no-gutter
 					.cont_hover
 						.jue.cuadro_contenido 18
@@ -85,10 +97,19 @@ block content
 								| 19:30 hrs
 								| 20:30 hrs
 								| 21:30 hrs
-							.equiposVS(style="white-space:pre").float-R
-								| Equipo 1 vs Equipo2
-								| Equipo 1 vs Equipo2
-								| Equipo 1 vs Equipo2
+							table.equiposVS.float-R
+								tr
+									td.line #{equipo3.name}  
+									td.line vs  
+									td.line #{equipo6.name}
+								tr
+									td.line #{equipo1.name}  
+									td.line vs  
+									td.line #{equipo4.name}
+								tr
+									td.line #{equipo2.name}  
+									td.line vs  
+									td.line #{equipo5.name}
 	section#calendario.al100.page-scroll
 		.container.content-section.text-center
 			.row
@@ -106,29 +127,29 @@ block content
 								.cuadro_intro_hover.ckMenu
 									.caption
 										.blur
-										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal1") CK
-											p.name-T Marce y SPDP
+										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal1").mayusculas #{equipo1.cap}
+											p.name-T #{equipo1.name}
 												.ver-completo Ver equipo completo
 							.col-xs-12.col-sm-4.col-md-2
 								.cuadro_intro_hover.darioMenu
 									.caption
 										.blur
-										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal2") DARIO
-											p.name-T Altos Boludos
+										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal2").mayusculas #{equipo2.cap}
+											p.name-T #{equipo2.name}
 												.ver-completo Ver equipo completo
 							.col-xs-12.col-sm-4.col-md-2
 								.cuadro_intro_hover.alanMenu
 									.caption
 										.blur
-										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal3") ALAN
-											p.name-T Back2DPigeons
+										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal3").mayusculas #{equipo3.cap}
+											p.name-T #{equipo3.name}
 												.ver-completo Ver equipo completo
 							.col-xs-12.col-sm-4.col-md-2
 								.cuadro_intro_hover.fyrMenu
 									.caption
 										.blur
-										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal4") FYR
-											p.name-T Esta
+										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal4").mayusculas #{equipo4.cap}
+											p.name-T #{equipo4.name}
 												.ver-completo Ver equipo completo
 							.col-xs-12.col-sm-4.col-md-2
 								.cuadro_intro_hover.ozzMenu
@@ -136,8 +157,8 @@ block content
 										img(src="img/ozz.png" alt="").img-responsive
 									.caption
 										.blur
-										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal5") OZZ
-											p.name-T Los Galletas
+										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal5").mayusculas #{equipo5.cap}
+											p.name-T #{equipo5.name}
 												.ver-completo Ver equipo completo
 							.col-xs-12.col-sm-4.col-md-2
 								.cuadro_intro_hover.raulMenu
@@ -145,8 +166,8 @@ block content
 										img(src="img/ozz.png" alt="").img-responsive
 									.caption
 										.blur
-										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal6") RAUL	
-											p.name-T Equipo 6
+										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal6").mayusculas raúl	
+											p.name-T #{equipo6.name}
 												.ver-completo Ver equipo completo
 				.modal.fade#myModal1(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
 					.modal-dialog.caja-flotante
@@ -156,7 +177,7 @@ block content
 								h4.modal-title#myModalLabel About team
 							.modal-body#ckTeam		
 								img(src="img/ck.png").team-pic
-								h3= e1
+								h3 #{equipo1.name}
 								p Marcela / Jader / Javi / Pablo / Robert
 								.float-L.partidos= pg
 									.score 0
@@ -173,7 +194,7 @@ block content
 								h4.modal-title#myModalLabel About team
 							.modal-body#darioTeam
 								img(src="img/dario.png").team-pic
-								h3= e2
+								h3 #{equipo2.name}
 								p Tamara / Xac / Aldo / Charly B / Greco / Montoya
 								.float-L.partidos= pg
 									.score 0
@@ -190,7 +211,7 @@ block content
 								h4.modal-title#myModalLabel About team
 							.modal-body#alanTeam
 								img(src="img/alan.png").team-pic
-								h3= e3
+								h3 #{equipo3.name}
 								p Hadzidy / Marissa / Fide / Ulises / Yushell / Zpectrito
 								.float-L.partidos= pg
 									.score 0
@@ -207,7 +228,7 @@ block content
 								h4.modal-title#myModalLabel About team
 							.modal-body#fyrTeam
 								img(src="img/fyr.png").team-pic
-								h3= e4
+								h3 #{equipo4.name}
 								p Cecy / Mariel / Gabo / Licea / Wolf / Zacatenco
 								.float-L.partidos= pg
 									.score 0
@@ -224,7 +245,7 @@ block content
 								h4.modal-title#myModalLabel About team
 							.modal-body#ozzTeam
 								img(src="img/ozz.png").team-pic
-								h3= e5
+								h3 #{equipo5.name}
 								p Juanita / Maru / Martín / Matt / Mike / Redo
 								.float-L.partidos= pg
 									.score 0
@@ -241,7 +262,7 @@ block content
 								h4.modal-title#myModalLabel About team
 							.modal-body#raulTeam
 								img(src="img/raul.png").team-pic
-								h3= e6
+								h3 #{equipo6.name}
 								p Mariana / Adrián / Joel / Pingo / Pollito / Roco
 								.float-L.partidos= pg
 									.score 0

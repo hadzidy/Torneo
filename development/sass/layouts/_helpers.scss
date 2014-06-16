@@ -9,10 +9,12 @@
 	@include span-columns(12);}
 
 .no-gutter{
-	@include span-columns(110 of 330);
+	@include span-columns(110 of 440);
 	@include omega;}
 
 .float-L{
 	float: left;}
 .float-R{
-	float: right;}	
+	float: right;}
+.mayusculas {
+	text-transform:uppercase;}	

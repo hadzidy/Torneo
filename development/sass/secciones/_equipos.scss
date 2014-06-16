@@ -91,6 +91,7 @@ $capitanes: ck, dario, alan, fyr, ozz, raul;
 	font-size: 14px;
 	font-weight: lighter;
 	color: $azul;
+	text-transform: capitalize;
 		&:hover{
 			color: $rojo;
 		}
@@ -99,8 +100,6 @@ $capitanes: ck, dario, alan, fyr, ozz, raul;
 	width: 137px; 
 	height: 137px; 
 	border: 0px;
-	margin-right: 10px;
-
 }
 .caja-flotante{
 

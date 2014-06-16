@@ -49,7 +49,7 @@
 		font-size: 20px;
 
 		li{
-			font-size: 18px;
+			font-size: 24px;
 			bottom: 0px;
 		}
 	}			
@@ -67,6 +67,14 @@
 	position: relative;
 	overflow: hidden;
 	bottom: -2px;
+}
+.estatic{
+	height: 60px;
+	margin-top: 110px;
+	position: relative;
+	overflow: hidden;
+	bottom: -2px;
+	padding: 16px;
 }
 .cuadro_contenido{
 	padding-left: 8px;
@@ -106,14 +114,26 @@
 		margin-top: -16px;
 	}
 	.horariosXdia{
-		font-size: 14px;
+		padding-left: 6px;
+		font-size: 18px;
 		@include span-columns(1 of 4);
+		line-height: 19px;
 	}
 	.equiposVS{
+		margin: 0;
 		font-size: 14px;
 		position: relative;
-		@include span-columns(2 of 4);
-		@include shift(1);
+		@include span-columns(3 of 4);
 		text-align: left;
+		line-height: 4px;
+		padding: 0px;
+		tr{
+			height: 16px;
+			.line{
+				padding: 8px 6px;
+				border: none;
+			}
+		}
 	}
 }
+
