@@ -13,7 +13,8 @@
 }
 .contenedor-calendar{
 	@include span-columns(10);
-	left: 16.4%;
+	left: 0;
+	right: 0;
 	height: 60%;
 	top: 0;
 	bottom: 0;
@@ -25,19 +26,21 @@
 	padding-bottom: 20px;
 	padding-top: 20px;
 	vertical-align: middle;
-	min-height: 558px;
+	min-height: 567px;
+	min-width: 340px;
+	overflow: auto;
 }
 .calendar-table{
 	padding-left: 20px;
 }
 .vs{
-	width: 10%
+	width: 20px;
 }
 .teamys{
-	width: 30%
+	width: 97px;
 }
 .hours{
-	width: 20%
+	width: 58px;
 }
 .jornadas{
 	text-align: center;
@@ -69,6 +72,12 @@
 	float: left;
 	right: 0;
 	position: absolute;
+}
+.limit{
+	width: 310px;
+}
+.column-10{
+	@include span-columns(10);
 }
 
 

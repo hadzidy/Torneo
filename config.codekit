@@ -4681,13 +4681,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/public\/img\/grwpo.jpg": {
+	"\/public\/img\/Grwpo.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 45020,
-		"inputAbbreviatedPath": "\/public\/img\/grwpo.jpg",
-		"outputAbbreviatedPath": "\/public\/img\/grwpo.jpg",
+		"inputAbbreviatedPath": "\/public\/img\/Grwpo.jpg",
+		"outputAbbreviatedPath": "\/public\/img\/Grwpo.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4746,15 +4746,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
-		},
-	"\/public\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/public\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/public\/js\/table.js": {
 		"fileType": 64,
