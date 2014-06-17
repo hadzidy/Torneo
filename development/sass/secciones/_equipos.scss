@@ -35,11 +35,7 @@ $capitanes: ck, dario, alan, fyr, ozz, raul;
 	}
 	.cuadro_intro_hover:hover .caption{
 		opacity: 1;
-		transform: translateY(-280px);
-		-webkit-transform:translateY(-280px);
-		-moz-transform:translateY(-280px);
-		-ms-transform:translateY(-280px);
-		-o-transform:translateY(-280px);
+		@include transform (translateY(-280px));
 	}
 	.cuadro_intro_hover img{
 		z-index: 4;
@@ -47,11 +43,7 @@ $capitanes: ck, dario, alan, fyr, ozz, raul;
 	.cuadro_intro_hover .caption{
 		position: absolute;
 		top:280px;
-		-webkit-transition:all 0.3s ease-in-out;
-		-moz-transition:all 0.3s ease-in-out;
-		-o-transition:all 0.3s ease-in-out;
-		-ms-transition:all 0.3s ease-in-out;
-		transition:all 0.3s ease-in-out;
+		@include transition (all 0.3s ease-in-out);
 		width: 100%;
 	}
 	.cuadro_intro_hover .blur{

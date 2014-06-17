@@ -11,10 +11,18 @@
 .no-gutter{
 	@include span-columns(110 of 440);
 	@include omega;}
-
+.no-gutter2col{
+	@include span-columns(220 of 440);
+	@include omega;}
 .float-L{
 	float: left;}
 .float-R{
 	float: right;}
 .mayusculas {
-	text-transform:uppercase;}	
+	text-transform:uppercase;}
+.bold{
+	font-weight: bold;
+}
+.black{
+	color: black;
+}

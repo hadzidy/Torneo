@@ -58,9 +58,14 @@
 
 @each $c in $colors{
 					.#{nth($c,2)}{
-						background-color: rgba(nth($c,1),0.5);
+						background-color: nth($c,1);
 					}
 				}
+@each $c in $colors{
+					.#{nth($c,2)}1{
+						background-color: rgba(nth($c,1), 0.5);
+					}
+				}				
 .cont_hover{
 	height: 140px;
 	margin-top: 30px;
@@ -87,22 +92,15 @@
 	top: 80px;
 	width: 100%;
 	position: relative;
-	-webkit-transition:all 0.2s ease-in-out;
-	-moz-transition:all 0.2s ease-in-out;
-	-o-transition:all 0.2s ease-in-out;
-	-ms-transition:all 0.2s ease-in-out;
-	transition:all 0.2s ease-in-out;
+	@include transition(all 0.2s ease-in-out);
 
 	hr{
 		width: 98%;
+		color: black;
 	}
 
 	&:hover {
-		transform: translateY(-84px);
-		-webkit-transform:translateY(-84px);
-		-moz-transform:translateY(-84px);
-		-ms-transform:translateY(-84px);
-		-o-transform:translateY(-84px);
+		@include transform(translateY(-84px));
 	}
 	.mes{
 		font-size: 13px;
@@ -119,21 +117,22 @@
 		@include span-columns(1 of 4);
 		line-height: 19px;
 	}
-	.equiposVS{
-		margin: 0;
-		font-size: 14px;
-		position: relative;
-		@include span-columns(3 of 4);
-		text-align: left;
-		line-height: 4px;
-		padding: 0px;
-		tr{
-			height: 16px;
-			.line{
-				padding: 8px 6px;
-				border: none;
-			}
-		}
+	
+	
+}
+.line{
+	padding: 8px 6px;
+	border: none;
+}
+.equiposVS{
+	margin: 0;
+	font-size: 14px;
+	position: relative;
+	@include span-columns(3 of 4);
+	text-align: left;
+	line-height: 4px;
+	padding: 0px;
+	tr{
+		height: 16px;
 	}
 }
-
