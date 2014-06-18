@@ -6,15 +6,10 @@
 	left: 0;
 	right: 0;
 	height: 60%;
-	top: 0;
-	bottom: 0;
-	margin: auto;
 	position: absolute;
 	background: rgba(0,0,0,0.6);
 	border: 2px white solid;
-	padding-left: 20px;
-	padding-bottom: 20px;
-	padding-top: 20px;
+	padding: 20px 0 20px 20px;
 	vertical-align: middle;
 	min-height: 567px;
 	min-width: 340px;
@@ -96,8 +91,7 @@
 	content: "primero";
 	@include media(min-width 725px max-width 1266px){
 		width: 98px;
-		
-		} 
+	} 
 }
 .equipo-lugar{
 	width: 125%;
