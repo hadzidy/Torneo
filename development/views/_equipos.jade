@@ -1,0 +1,155 @@
+section#equipos.al100
+	.container.text-center
+		.row
+			.col-lg-12
+				.span3.contTeams.float-L
+					h2 Los equipos
+					center
+						.col-xs-12.col-sm-4.col-md-2
+							.cuadro_intro_hover.ckMenu
+								.caption
+									.blur
+									a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal1").mayusculas #{equipo1.cap}
+										p.name-T #{equipo1.name}
+											.ver-completo.font-14px Ver equipo completo
+						.col-xs-12.col-sm-4.col-md-2
+							.cuadro_intro_hover.darioMenu
+								.caption
+									.blur
+									a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal2").mayusculas #{equipo2.cap}
+										p.name-T #{equipo2.name}
+											.ver-completo.font-14px Ver equipo completo
+						.col-xs-12.col-sm-4.col-md-2
+							.cuadro_intro_hover.alanMenu
+								.caption
+									.blur
+									a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal3").mayusculas #{equipo3.cap}
+										p.name-T #{equipo3.name}
+											.ver-completo.font-14px Ver equipo completo
+						.col-xs-12.col-sm-4.col-md-2
+							.cuadro_intro_hover.fyrMenu
+								.caption
+									.blur
+									a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal4").mayusculas #{equipo4.cap}
+										p.name-T #{equipo4.name}
+											.ver-completo.font-14px Ver equipo completo
+						.col-xs-12.col-sm-4.col-md-2
+							.cuadro_intro_hover.ozzMenu
+								p
+									img(src="img/ozz.png" alt="").img-responsive
+								.caption
+									.blur
+									a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal5").mayusculas #{equipo5.cap}
+										p.name-T #{equipo5.name}
+											.ver-completo.font-14px Ver equipo completo
+						.col-xs-12.col-sm-4.col-md-2
+							.cuadro_intro_hover.raulMenu
+								p
+									img(src="img/ozz.png" alt="").img-responsive
+								.caption
+									.blur
+									a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal6").mayusculas raúl	
+										p.name-T #{equipo6.name}
+											.ver-completo.font-14px Ver equipo completo
+			.modal.fade#myModal1(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+				.modal-dialog.caja-flotante
+					.modal-content.noRoundBorders
+						.modal-header
+							button(type="button" data-dismiss="modal" aria-hidden="true").close
+							h4.modal-title#myModalLabel About team
+						.modal-body#ckTeam		
+							img(src="img/ck.png").team-pic
+							h3 #{equipo1.name}
+							p Marcela / Jader / Javi / Pablo / Robert
+							.float-L.partidos= pg
+								.score.font-24px 2
+							.float-R.partidos= pl
+								.score.font-24px 0  
+						.modal-footer
+							center
+								button(type="button" data-dismiss="modal").btn.btn-default Cerrar
+			.modal.fade#myModal2(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+				.modal-dialog
+					.modal-content.noRoundBorders
+						.modal-header
+							button(type="button" data-dismiss="modal" aria-hidden="true").close
+							h4.modal-title#myModalLabel About team
+						.modal-body#darioTeam
+							img(src="img/dario.png").team-pic
+							h3 #{equipo2.name}
+							p Tamara / Xac / Aldo / Charly B / Greco / Montoya
+							.float-L.partidos= pg
+								.score.font-24px 1
+							.float-R.partidos= pl
+								.score.font-24px 1 
+						.modal-footer
+							center
+								button(type="button" data-dismiss="modal").btn.btn-default Cerrar
+			.modal.fade#myModal3(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+				.modal-dialog
+					.modal-content.noRoundBorders
+						.modal-header
+							button(type="button" data-dismiss="modal" aria-hidden="true").close
+							h4.modal-title#myModalLabel About team
+						.modal-body#alanTeam
+							img(src="img/alan.png").team-pic
+							h3 #{equipo3.name}
+							p Hadzidy / Marissa / Fide / Ulises / Yushell / Zpectrito
+							.float-L.partidos= pg
+								.score.font-24px 1
+							.float-R.partidos= pl
+								.score.font-24px 1 
+						.modal-footer
+							center
+								button(type="button" data-dismiss="modal").btn.btn-default Cerrar
+			.modal.fade#myModal4(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+				.modal-dialog
+					.modal-content.noRoundBorders
+						.modal-header
+							button(type="button" data-dismiss="modal" aria-hidden="true").close
+							h4.modal-title#myModalLabel About team
+						.modal-body#fyrTeam
+							img(src="img/fyr.png").team-pic
+							h3 #{equipo4.name}
+							p Cecy / Mariel / Gabo / Licea / Wolf / Zacatenco
+							.float-L.partidos= pg
+								.score.font-24px 0
+							.float-R.partidos= pl
+								.score.font-24px 2  
+						.modal-footer
+							center
+								button(type="button" data-dismiss="modal").btn.btn-default Cerrar
+			.modal.fade#myModal5(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+				.modal-dialog
+					.modal-content.noRoundBorders
+						.modal-header
+							button(type="button" data-dismiss="modal" aria-hidden="true").close
+							h4.modal-title#myModalLabel About team
+						.modal-body#ozzTeam
+							img(src="img/ozz.png").team-pic
+							h3 #{equipo5.name}
+							p Juanita / Maru / Martín / Matt / Mike / Redo
+							.float-L.partidos= pg
+								.score.font-24px 1
+							.float-R.partidos= pl
+								.score.font-24px 1 
+						.modal-footer
+							center
+								button(type="button" data-dismiss="modal").btn.btn-default Cerrar
+			.modal.fade#myModal6(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+				.modal-dialog
+					.modal-content.noRoundBorders
+						.modal-header
+							button(type="button" data-dismiss="modal" aria-hidden="true").close
+							h4.modal-title#myModalLabel About team
+						.modal-body#raulTeam
+							img(src="img/raul.png").team-pic
+							h3 #{equipo6.name}
+							p Mariana / Adrián / Joel / Pingo / Pollito / Roco
+							.float-L.partidos= pg
+								.score.font-24px 1
+							.float-R.partidos= pl
+								.score.font-24px 1 
+						.modal-footer
+							center
+								button(type="button" data-dismiss="modal").btn.btn-default Cerrar
