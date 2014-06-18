@@ -82,6 +82,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/development\/sass\/layouts\/_no-format.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/development\/sass\/layouts\/_no-format.scss",
+		"outputAbbreviatedPath": "\/public\/css\/_no-format.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/development\/sass\/layouts\/_variables.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -158,6 +174,22 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/development\/sass\/secciones\/no-format.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/development\/sass\/secciones\/no-format.scss",
+		"outputAbbreviatedPath": "\/public\/css\/no-format.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
@@ -4721,6 +4753,17 @@
 		"initialSize": 123670,
 		"inputAbbreviatedPath": "\/public\/img\/raul.png",
 		"outputAbbreviatedPath": "\/public\/img\/raul.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/img\/title-black.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7013,
+		"inputAbbreviatedPath": "\/public\/img\/title-black.png",
+		"outputAbbreviatedPath": "\/public\/img\/title-black.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

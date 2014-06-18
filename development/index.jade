@@ -7,6 +7,7 @@ block content
 	- equipo4 = {cap: "fyr", num: "4", name: "Esta"}
 	- equipo5 = {cap: "ozz", num: "5", name: "Las Galletas"}
 	- equipo6 = {cap: "raul", num: "6", name: "Equipo 6"}
+	- horarios = {uno: "7:30PM", dos: "8:00PM", tres: "8:30PM"}
 	- pg = 'Partidos Ganados'
 	- pl = 'Partidos Perdidos'
 	nav.navbar.navbar-custom.navbar-fixed-top(role='navigation').col
@@ -30,25 +31,22 @@ block content
 	section#home.al100.total-container.page-scroll
 		.containerNt.outer-container
 			.title(style="white-space:pre")
-			br
-			a.btn(href="#calendario")
-				i.fa.fa-angle-down.animated
 		.columnas-12.menu-partidos-week
 			ul
 				br
-				li.no-gutter.estatic.prox PARTIDOS DE LA SEMANA: 
-				li.no-gutter
+				li.font-24px.no-gutter.estatic.prox PARTIDOS DE LA SEMANA: 
+				li.font-24px.no-gutter
 					.cont_hover.black 
 						.lun1.cuadro_contenido 16 
 							br 
 							.mes.float-L JUNIO
 							.dia.float-R LUNES
 							hr
-							.horariosXdia(style="white-space:pre").float-L 
-								| 19:30 hrs 
-								| 20:30 hrs
-								| 21:30 hrs
-							table.equiposVS.float-R
+							.horariosXdia.font-18px(style="white-space:pre").float-L 
+								| #{horarios.uno} 
+								| #{horarios.dos}
+								| #{horarios.tres}
+							table.equiposVS.font-14px.float-R
 								tr
 									td.line #{equipo1.name}  
 									td.line vs  
@@ -61,18 +59,18 @@ block content
 									td.line #{equipo5.name}  
 									td.line vs  
 									td.line #{equipo6.name}
-				li.no-gutter
+				li.font-24px.no-gutter
 					.cont_hover.black
 						.mar1.cuadro_contenido 17
 							br 
 							.mes.float-L JUNIO 
 							.dia.float-R MARTES
 							hr
-							.horariosXdia(style="white-space:pre").float-L 
-								| 19:30 hrs
-								| 20:30 hrs
-								| 21:30 hrs
-							table.equiposVS.float-R
+							.horariosXdia.font-18px(style="white-space:pre").float-L 
+								| #{horarios.uno} 
+								| #{horarios.dos}
+								| #{horarios.tres}
+							table.equiposVS.font-14px.float-R
 								tr
 									td.line #{equipo4.name}  
 									td.line vs  
@@ -85,18 +83,18 @@ block content
 									td.line #{equipo1.name}  
 									td.line vs  
 									td.line #{equipo3.name}
-				li.no-gutter
+				li.font-24px.no-gutter
 					.cont_hover.black
 						.jue1.cuadro_contenido 18
 							br 
 							.mes.float-L JUNIO 
 							.dia.float-R JUEVES
 							hr
-							.horariosXdia(style="white-space:pre").float-L
-								| 19:30 hrs
-								| 20:30 hrs
-								| 21:30 hrs
-							table.equiposVS.float-R
+							.horariosXdia.font-18px(style="white-space:pre").float-L
+								| #{horarios.uno} 
+								| #{horarios.dos}
+								| #{horarios.tres}
+							table.equiposVS.font-14px.float-R
 								tr
 									td.line #{equipo3.name}  
 									td.line vs  
@@ -116,274 +114,274 @@ block content
 					thead
 						tr
 							th.pad-table.non-border.jornadas.limit  
-								.tit-jornada JORNADA 1
-								.subtit-jornada Lunes 16 de Junio
+								.tit-jornada.font-24px JORNADA 1
+								.subtit-jornada.font-18px Lunes 16 de Junio
 							th.pad-table.non-border.jornadas.limit  
-								.tit-jornada JORNADA 2
-								.subtit-jornada Martes 17 de Junio
+								.tit-jornada.font-24px JORNADA 2
+								.subtit-jornada.font-18px Martes 17 de Junio
 							th.pad-table.non-border.jornadas.limit  
-								.tit-jornada JORNADA 3
-								.subtit-jornada Jueves 19 de Junio 
+								.tit-jornada.font-24px JORNADA 3
+								.subtit-jornada.font-18px Jueves 19 de Junio 
 					tbody
 						tr
 							td.pad-table.non-border.limit 
 								table.no-margin
-									td.pad-con-table.non-border.hours 7:30PM
+									td.pad-con-table.non-border.hours #{horarios.uno} 
 									td.pad-con-table.non-border.teamys #{equipo1.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo2.name}  
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 7:30PM
+									td.pad-con-table.non-border.hours #{horarios.uno}
 									td.pad-con-table.non-border.teamys #{equipo4.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo5.name} 
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 7:30PM
+									td.pad-con-table.non-border.hours #{horarios.uno}
 									td.pad-con-table.non-border.teamys #{equipo3.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo6.name} 
 						tr
 							td.pad-table.non-border.limit 
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:00PM
+									td.pad-con-table.non-border.hours #{horarios.dos}
 									td.pad-con-table.non-border.teamys #{equipo3.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo4.name}  
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:00PM
+									td.pad-con-table.non-border.hours #{horarios.dos}
 									td.pad-con-table.non-border.teamys #{equipo2.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo6.name} 
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:00PM
+									td.pad-con-table.non-border.hours #{horarios.dos}
 									td.pad-con-table.non-border.teamys #{equipo1.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo4.name} 
 						tr
 							td.pad-table.non-border.limit 
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:30PM
+									td.pad-con-table.non-border.hours #{horarios.tres}
 									td.pad-con-table.non-border.teamys #{equipo5.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo6.name}  
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:30PM
+									td.pad-con-table.non-border.hours #{horarios.tres}
 									td.pad-con-table.non-border.teamys #{equipo1.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo3.name} 
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:30PM
+									td.pad-con-table.non-border.hours #{horarios.tres}
 									td.pad-con-table.non-border.teamys #{equipo2.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo5.name}
 					thead
 						tr
 							th.pad-table.non-border.jornadas.limit 
-								.tit-jornada JORNADA 3
-								.subtit-jornada Lunes 23 de Junio
+								.tit-jornada.font-24px JORNADA 3
+								.subtit-jornada.font-18px Lunes 23 de Junio
 							th.pad-table.non-border.jornadas.limit 
-								.tit-jornada JORNADA 4
-								.subtit-jornada Martes 24 de Junio
+								.tit-jornada.font-24px JORNADA 4
+								.subtit-jornada.font-18px Martes 24 de Junio
 							th.pad-table.non-border.jornadas.limit 
-								.tit-jornada JORNADA 5
-								.subtit-jornada Jueves 26 de Junio 
+								.tit-jornada.font-24px JORNADA 5
+								.subtit-jornada.font-18px Jueves 26 de Junio 
 					tbody
 						tr
 							td.pad-table.non-border.limit 
 								table.no-margin
-									td.pad-con-table.non-border.hours 7:30PM
+									td.pad-con-table.non-border.hours #{horarios.uno}
 									td.pad-con-table.non-border.teamys #{equipo1.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo5.name}  
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 7:30PM
+									td.pad-con-table.non-border.hours #{horarios.uno}
 									td.pad-con-table.non-border.teamys #{equipo2.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo4.name} 
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 7:30PM
+									td.pad-con-table.non-border.hours #{horarios.uno}
 									td.pad-con-table.non-border.teamys #{equipo2.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo1.name} 
 						tr
 							td.pad-table.non-border.limit 
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:00PM
+									td.pad-con-table.non-border.hours #{horarios.dos}
 									td.pad-con-table.non-border.teamys #{equipo2.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo3.name}  
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:00PM
+									td.pad-con-table.non-border.hours #{horarios.dos}
 									td.pad-con-table.non-border.teamys #{equipo1.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo6.name} 
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:00PM
+									td.pad-con-table.non-border.hours #{horarios.dos}
 									td.pad-con-table.non-border.teamys #{equipo4.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo3.name} 
 						tr
 							td.pad-table.non-border.limit 
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:30PM
+									td.pad-con-table.non-border.hours #{horarios.tres}
 									td.pad-con-table.non-border.teamys #{equipo4.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo6.name}  
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:30PM
+									td.pad-con-table.non-border.hours #{horarios.tres}
 									td.pad-con-table.non-border.teamys #{equipo3.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo5.name} 
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:30PM
+									td.pad-con-table.non-border.hours #{horarios.tres}
 									td.pad-con-table.non-border.teamys #{equipo6.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo5.name}
 					thead
 						tr
 							th.pad-table.non-border.jornadas.limit 
-								.tit-jornada JORNADA 7
-								.subtit-jornada Lunes 30 de Junio
+								.tit-jornada.font-24px JORNADA 7
+								.subtit-jornada.font-18px Lunes 30 de Junio
 							th.pad-table.non-border.jornadas.limit 
-								.tit-jornada JORNADA 8
-								.subtit-jornada Martes 1 de Julio
+								.tit-jornada.font-24px JORNADA 8
+								.subtit-jornada.font-18px Martes 1 de Julio
 							th.pad-table.non-border.jornadas.limit 
-								.tit-jornada JORNADA 9
-								.subtit-jornada Jueves 3 de Julio 
+								.tit-jornada.font-24px JORNADA 9
+								.subtit-jornada.font-18px Jueves 3 de Julio 
 					tbody
 						tr
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 7:30PM
+									td.pad-con-table.non-border.hours #{horarios.uno}
 									td.pad-con-table.non-border.teamys #{equipo5.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo4.name}  
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 7:30PM
+									td.pad-con-table.non-border.hours #{horarios.uno}
 									td.pad-con-table.non-border.teamys #{equipo6.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo3.name} 
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 7:30PM
+									td.pad-con-table.non-border.hours #{horarios.uno}
 									td.pad-con-table.non-border.teamys #{equipo5.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo1.name} 
 						tr
 							td.pad-table.non-border.limit 
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:00PM
+									td.pad-con-table.non-border.hours #{horarios.dos}
 									td.pad-con-table.non-border.teamys #{equipo6.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo2.name}  
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:00PM
+									td.pad-con-table.non-border.hours #{horarios.dos}
 									td.pad-con-table.non-border.teamys #{equipo4.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo1.name} 
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:00PM
+									td.pad-con-table.non-border.hours #{horarios.dos}
 									td.pad-con-table.non-border.teamys #{equipo3.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo2.name} 
 						tr
 							td.pad-table.non-border.limit 
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:30PM
+									td.pad-con-table.non-border.hours #{horarios.tres}
 									td.pad-con-table.non-border.teamys #{equipo3.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo1.name}  
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:30PM
+									td.pad-con-table.non-border.hours #{horarios.tres}
 									td.pad-con-table.non-border.teamys #{equipo5.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo2.name} 
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:30PM
+									td.pad-con-table.non-border.hours #{horarios.tres}
 									td.pad-con-table.non-border.teamys #{equipo6.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo4.name}
 					thead
 						tr
 							th.pad-table.non-border.jornadas.limit 
-								.tit-jornada JORNADA 10
-								.subtit-jornada Lunes 7 de Julio
+								.tit-jornada.font-24px JORNADA 10
+								.subtit-jornada.font-18px Lunes 7 de Julio
 							th.pad-table.non-border.jornadas.limit 
-								.tit-jornada POR EL HONOR
-								.subtit-jornada Martes 8 de Julio
+								.tit-jornada.font-24px POR EL HONOR
+								.subtit-jornada.font-18px Martes 8 de Julio
 							th.pad-table.non-border.jornadas.limit
-								.tit-jornada POR EL 3er LUGAR
-								.subtit-jornada Jueves 10 de Julio 
+								.tit-jornada.font-24px POR EL 3er LUGAR
+								.subtit-jornada.font-18px Jueves 10 de Julio 
 					tbody
 						tr
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 7:30PM
+									td.pad-con-table.non-border.hours #{horarios.uno}
 									td.pad-con-table.non-border.teamys #{equipo4.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo2.name}  
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 7:30PM
+									td.pad-con-table.non-border.hours #{horarios.tres}
 									td.pad-con-table.non-border.teamys 5to Puesto
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys 6to Puesto 
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 7:30PM
+									td.pad-con-table.non-border.hours #{horarios.tres}
 									td.pad-con-table.non-border.teamys Perdedor semi 1
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys Perdedor semi 2
 						tr
 							td.pad-table.non-border.limit 
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:00PM
+									td.pad-con-table.non-border.hours #{horarios.dos}
 									td.pad-con-table.non-border.teamys #{equipo6.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo1.name}  
 						tr
 							td.pad-table.non-border.limit 
 								table.no-margin
-									td.pad-con-table.non-border.hours 9:30PM
+									td.pad-con-table.non-border.hours #{horarios.tres}
 									td.pad-con-table.non-border.teamys #{equipo5.name}
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys #{equipo3.name}
 					thead
 						tr
 							th.pad-table.non-border.jornadas.limit 
-								.tit-jornada SEMIFINALES
-								.subtit-jornada Martes 8 de Julio
+								.tit-jornada.font-24px SEMIFINALES
+								.subtit-jornada.font-18px Martes 8 de Julio
 							th.pad-table.non-border.jornadas.limit 
-								.tit-jornada FINAL
-								.subtit-jornada Jueves 10 de JuLio 
+								.tit-jornada.font-24px FINAL
+								.subtit-jornada.font-18px Jueves 10 de JuLio 
 					tbody
 						tr
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:00PM
+									td.pad-con-table.non-border.hours #{horarios.dos}
 									td.pad-con-table.non-border.teamys 1er Lugar
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys 4to Lugar 
 							td.pad-table.non-border.limit
 								table.no-margin
-									td.pad-con-table.non-border.hours 8:00PM
+									td.pad-con-table.non-border.hours #{horarios.dos}
 									td.pad-con-table.non-border.teamys Ganador Semi 1
 									td.pad-con-table.non-border.vs vs
 									td.pad-con-table.non-border.teamys Ganador Semi 2
@@ -394,37 +392,37 @@ block content
 					.contenedor_hover.lun1
 						.puesto 1er LUGAR
 					.equipo-lugar.lun 
-						.expandir Ver
-						.equipos-ranki #{equipo3.name}
+						.expandir.font-14px Ver
+						.equipos-ranki #{equipo1.name}
 				.contenedor-mov.black
 					.contenedor_hover.lun1
 						.puesto 2do LUGAR
 					.equipo-lugar.lun 
-						.expandir Ver
-						.equipos-ranki #{equipo1.name}
+						.expandir.font-14px Ver
+						.equipos-ranki #{equipo6.name}
 				.contenedor-mov.black
 					.contenedor_hover.mar1
 						.puesto 3er LUGAR
 					.equipo-lugar.mar 
-						.expandir Ver
-						.equipos-ranki #{equipo6.name}																				 														
+						.expandir.font-14px Ver
+						.equipos-ranki #{equipo3.name}																				 														
 				.contenedor-mov.black
 					.contenedor_hover.mar1
 						.puesto 4to LUGAR
 					.equipo-lugar.mar 
-						.expandir Ver
+						.expandir.font-14px Ver
 						.equipos-ranki #{equipo5.name}
 				.contenedor-mov.black
 					.contenedor_hover.jue1
 						.puesto 5to LUGAR
 					.equipo-lugar.jue 
-						.expandir Ver
+						.expandir.font-14px Ver
 						.equipos-ranki #{equipo2.name}
 				.contenedor-mov.black
 					.contenedor_hover.jue1
 						.puesto 6to LUGAR
 					.equipo-lugar.jue 
-						.expandir Ver
+						.expandir.font-14px Ver
 						.equipos-ranki #{equipo4.name}																		
 	section#equipos.al100
 		.container.text-center
@@ -437,48 +435,48 @@ block content
 								.cuadro_intro_hover.ckMenu
 									.caption
 										.blur
-										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal1").mayusculas #{equipo1.cap}
+										a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal1").mayusculas #{equipo1.cap}
 											p.name-T #{equipo1.name}
-												.ver-completo Ver equipo completo
+												.ver-completo.font-14px Ver equipo completo
 							.col-xs-12.col-sm-4.col-md-2
 								.cuadro_intro_hover.darioMenu
 									.caption
 										.blur
-										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal2").mayusculas #{equipo2.cap}
+										a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal2").mayusculas #{equipo2.cap}
 											p.name-T #{equipo2.name}
-												.ver-completo Ver equipo completo
+												.ver-completo.font-14px Ver equipo completo
 							.col-xs-12.col-sm-4.col-md-2
 								.cuadro_intro_hover.alanMenu
 									.caption
 										.blur
-										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal3").mayusculas #{equipo3.cap}
+										a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal3").mayusculas #{equipo3.cap}
 											p.name-T #{equipo3.name}
-												.ver-completo Ver equipo completo
+												.ver-completo.font-14px Ver equipo completo
 							.col-xs-12.col-sm-4.col-md-2
 								.cuadro_intro_hover.fyrMenu
 									.caption
 										.blur
-										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal4").mayusculas #{equipo4.cap}
+										a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal4").mayusculas #{equipo4.cap}
 											p.name-T #{equipo4.name}
-												.ver-completo Ver equipo completo
+												.ver-completo.font-14px Ver equipo completo
 							.col-xs-12.col-sm-4.col-md-2
 								.cuadro_intro_hover.ozzMenu
 									p
 										img(src="img/ozz.png" alt="").img-responsive
 									.caption
 										.blur
-										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal5").mayusculas #{equipo5.cap}
+										a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal5").mayusculas #{equipo5.cap}
 											p.name-T #{equipo5.name}
-												.ver-completo Ver equipo completo
+												.ver-completo.font-14px Ver equipo completo
 							.col-xs-12.col-sm-4.col-md-2
 								.cuadro_intro_hover.raulMenu
 									p
 										img(src="img/ozz.png" alt="").img-responsive
 									.caption
 										.blur
-										a.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal6").mayusculas raúl	
+										a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal6").mayusculas raúl	
 											p.name-T #{equipo6.name}
-												.ver-completo Ver equipo completo
+												.ver-completo.font-14px Ver equipo completo
 				.modal.fade#myModal1(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
 					.modal-dialog.caja-flotante
 						.modal-content.noRoundBorders
@@ -490,9 +488,9 @@ block content
 								h3 #{equipo1.name}
 								p Marcela / Jader / Javi / Pablo / Robert
 								.float-L.partidos= pg
-									.score 1
+									.score.font-24px 2
 								.float-R.partidos= pl
-									.score 0  
+									.score.font-24px 0  
 							.modal-footer
 								center
 									button(type="button" data-dismiss="modal").btn.btn-default Cerrar
@@ -507,9 +505,9 @@ block content
 								h3 #{equipo2.name}
 								p Tamara / Xac / Aldo / Charly B / Greco / Montoya
 								.float-L.partidos= pg
-									.score 0
+									.score.font-24px 1
 								.float-R.partidos= pl
-									.score 1 
+									.score.font-24px 1 
 							.modal-footer
 								center
 									button(type="button" data-dismiss="modal").btn.btn-default Cerrar
@@ -524,9 +522,9 @@ block content
 								h3 #{equipo3.name}
 								p Hadzidy / Marissa / Fide / Ulises / Yushell / Zpectrito
 								.float-L.partidos= pg
-									.score 1
+									.score.font-24px 1
 								.float-R.partidos= pl
-									.score 0 
+									.score.font-24px 1 
 							.modal-footer
 								center
 									button(type="button" data-dismiss="modal").btn.btn-default Cerrar
@@ -541,9 +539,9 @@ block content
 								h3 #{equipo4.name}
 								p Cecy / Mariel / Gabo / Licea / Wolf / Zacatenco
 								.float-L.partidos= pg
-									.score 0
+									.score.font-24px 0
 								.float-R.partidos= pl
-									.score 1  
+									.score.font-24px 2  
 							.modal-footer
 								center
 									button(type="button" data-dismiss="modal").btn.btn-default Cerrar
@@ -558,9 +556,9 @@ block content
 								h3 #{equipo5.name}
 								p Juanita / Maru / Martín / Matt / Mike / Redo
 								.float-L.partidos= pg
-									.score 0
+									.score.font-24px 1
 								.float-R.partidos= pl
-									.score 1 
+									.score.font-24px 1 
 							.modal-footer
 								center
 									button(type="button" data-dismiss="modal").btn.btn-default Cerrar
@@ -575,9 +573,9 @@ block content
 								h3 #{equipo6.name}
 								p Mariana / Adrián / Joel / Pingo / Pollito / Roco
 								.float-L.partidos= pg
-									.score 1
+									.score.font-24px 1
 								.float-R.partidos= pl
-									.score 0 
+									.score.font-24px 1 
 							.modal-footer
 								center
 									button(type="button" data-dismiss="modal").btn.btn-default Cerrar

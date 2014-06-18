@@ -17,7 +17,7 @@
 	height: 100%;
 
 	.title{
-		background: url('../img/title.png') no-repeat;
+		background: url('../img/title-black.png') no-repeat;
 		position: absolute;
 		height: 187px;
 		width: 327px;
@@ -46,7 +46,6 @@
 		font-size: 20px;
 
 		li{
-			font-size: 24px;
 			bottom: 0px;
 			@include media(min-width 0px max-width 1240px){
 				font-size: 18px;
@@ -113,7 +112,6 @@
 	}
 	.horariosXdia{
 		padding-left: 6px;
-		font-size: 18px;
 		@include span-columns(1 of 4);
 		line-height: 19px;
 		@include media(min-width 0px max-width 1265px){
@@ -129,7 +127,6 @@
 }
 .equiposVS{
 	margin: 0;
-	font-size: 14px;
 	position: relative;
 	@include span-columns(3 of 4);
 	text-align: left;
