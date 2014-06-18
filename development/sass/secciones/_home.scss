@@ -32,17 +32,14 @@
 		z-index: 10;
 		margin-top: 200px;
 	}
-
-	.cuadCal{
-		height: 157px;
-		@include span-columns(2);
-		border: 3px solid white;
-	}
 }
 
 .menu-partidos-week{
 	bottom: 0px;
 	position: absolute;
+	@include media(min-width 0px max-width 1110px){
+				visibility: hidden;
+				} 
 
 	ul{
 		font-weight: bold;
@@ -51,6 +48,9 @@
 		li{
 			font-size: 24px;
 			bottom: 0px;
+			@include media(min-width 0px max-width 1240px){
+				font-size: 18px;
+			} 
 		}
 	}			
 }
@@ -116,6 +116,9 @@
 		font-size: 18px;
 		@include span-columns(1 of 4);
 		line-height: 19px;
+		@include media(min-width 0px max-width 1265px){
+				font-size: 12px;
+				} 
 	}
 	
 	
@@ -132,6 +135,10 @@
 	text-align: left;
 	line-height: 4px;
 	padding: 0px;
+	@include media(min-width 0px max-width 1265px){
+				font-size: 12px;
+				font-weight: lighter;
+				} 
 	tr{
 		height: 16px;
 	}

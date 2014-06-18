@@ -72,6 +72,11 @@
 	float: left;
 	right: 0;
 	position: absolute;
+	h3{
+		@include media(min-width 320px max-width 860px){
+			font-size: 18px
+		}
+	}
 }
 .limit{
 	width: 310px;
@@ -99,7 +104,12 @@
 .puesto{
 	font-size: 22px;
 	padding-top: 11px;
-	font-weight: bold; 
+	font-weight: bold;
+	content: "primero";
+	@include media(min-width 725px max-width 1266px){
+		width: 98px;
+		
+		} 
 }
 .equipo-lugar{
 	width: 125%;
@@ -115,18 +125,16 @@
 		float: left;
 		width: 25%;
 		height: 100%;
-		margin-left: -25px;
 		padding-top: 22px;
 		text-align: center;
 		line-height: 14px;
 	}
 	&:hover{
-		@include transform(translateX(-75%));
+		@include transform(translateX(-80%));
 	}
 }
 .equipos-ranki{
-	top: 0;
-	bottom: 0;
+	top: 13px;
 	margin: auto;
 	position: relative;
 	height: 430px;
