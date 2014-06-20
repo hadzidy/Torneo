@@ -1,4 +1,9 @@
 $capitanes: ck, dario, alan, fyr, ozz, raul;
+
+.full-width {
+	width: 100%;
+}
+
 .contTeams{
 	background-color: rgba(0,0,0,0.6);
 	border: none;
@@ -21,7 +26,8 @@ $capitanes: ck, dario, alan, fyr, ozz, raul;
 		}		
 	}
 		@each $c in $capitanes{
-		.#{$c}Menu{		
+		.#{$c}Menu{
+
 			background: url('../img/#{$c}.png') no-repeat center 0;
 			background-size: 300px;
 			.caption{

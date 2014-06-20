@@ -1,9 +1,9 @@
--var integrantesTeam1 = ["Marcela / Jader / Javi / Pablo / Robert"]
--var integrantesTeam2 = ["Tamara / Xac / Aldo / Charly B / Greco / Montoya"]
--var integrantesTeam3 = ["Hadzidy / Marissa / Fide / Ulises / Yushell / Zpectrito"]
--var integrantesTeam4 = ["Cecy / Mariel / Gabo / Licea / Wolf / Zacatenco"]
--var integrantesTeam5 = ["Juanita / Maru / Martín / Matt / Mike / Redo"]
--var integrantesTeam6 = ["Mariana / Adrián / Joel / Pingo / Pollito / Roco"]
+-var integrantesTeam1 = "Marcela / Jader / Javi / Pablo / Robert"
+-var integrantesTeam2 = "Tamara / Xac / Aldo / Charly B / Greco / Montoya"
+-var integrantesTeam3 = "Hadzidy / Marissa / Fide / Ulises / Yushell / Zpectrito"
+-var integrantesTeam4 = "Cecy / Mariel / Gabo / Licea / Wolf / Zacatenco"
+-var integrantesTeam5 = "Juanita / Maru / Martín / Matt / Mike / Redo"
+-var integrantesTeam6 = "Mariana / Adrián / Joel / Pingo / Pollito / Roco"
 mixin menuEquipos(capitan, equipo, numero)
 	.col-xs-12.col-sm-4.col-md-2
 		.cuadro_intro_hover(class= capitan+"Menu")
@@ -34,33 +34,16 @@ section#equipos.al100
 	.container.text-center
 		.row
 			.col-lg-12
-				.span3.contTeams.float-L
+				.span3.contTeams
 					h2 Los equipos
 					center
 						+menuEquipos(equipo1.cap, equipo1.name, "1")
 						+menuEquipos(equipo2.cap, equipo2.name, "2")
 						+menuEquipos(equipo3.cap, equipo3.name, "3")
 						+menuEquipos(equipo4.cap, equipo4.name, "4")
-						//+menuEquipos(equipo5.cap, equipo5.name, "5")
-						//+menuEquipos(equipo6.cap, equipo6.name, "6")	
-						.col-xs-12.col-sm-4.col-md-2
-							.cuadro_intro_hover.ozzMenu
-								p
-									img(src="img/ozz.png" alt="").img-responsive
-								.caption
-									.blur
-									a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal5").mayusculas #{equipo5.cap}
-										p.name-T #{equipo5.name}
-											.ver-completo.font-14px Ver equipo completo
-						.col-xs-12.col-sm-4.col-md-2
-							.cuadro_intro_hover.raulMenu
-								p
-									img(src="img/ozz.png" alt="").img-responsive
-								.caption
-									.blur
-									a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal6").mayusculas raúl	
-										p.name-T #{equipo6.name}
-											.ver-completo.font-14px Ver equipo completo
+						+menuEquipos(equipo5.cap, equipo5.name, "5")
+						+menuEquipos(equipo6.cap, equipo6.name, "6")
+
 			+modalEquipos("1", equipo1.cap, equipo1.name, integrantesTeam1, "2", "0")
 			+modalEquipos("2", equipo2.cap, equipo2.name, integrantesTeam2, "1", "1")
 			+modalEquipos("3", equipo3.cap, equipo3.name, integrantesTeam3, "1", "1")
