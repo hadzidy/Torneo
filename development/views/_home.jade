@@ -1,7 +1,7 @@
-mixin proxPartidos(dia, day, equipo1, equipo2, equipo3, equipo4, equipo5, equipo6)
+mixin proxPartidos(color, dia, day, equipo1, equipo2, equipo3, equipo4, equipo5, equipo6)
 	li.font-24px.no-gutter
 		.cont_hover.black 
-			.lun1.cuadro_contenido= dia 
+			.lun1.cuadro_contenido(class=color+"1")= dia 
 				br 
 				.mes.float-L JUNIO
 				.dia.float-R= day
@@ -32,6 +32,6 @@ section#home.al100.total-container.page-scroll
 		ul
 			br
 			li.font-24px.no-gutter.estatic.prox PARTIDOS DE LA SEMANA:
-			+proxPartidos("16", "LUNES", equipo1.name, equipo2.name, equipo3.name, equipo4.name, equipo5.name, equipo5.name) 
-			+proxPartidos("17", "MARTES", equipo4.name, equipo5.name, equipo2.name, equipo6.name, equipo1.name, equipo3.name) 
-			+proxPartidos("19", "JUEVES", equipo3.name, equipo6.name, equipo1.name, equipo4.name, equipo2.name, equipo5.name)
+			+proxPartidos("lun", "16", "LUNES", equipo1.name, equipo2.name, equipo3.name, equipo4.name, equipo5.name, equipo5.name) 
+			+proxPartidos("mar", "17", "MARTES", equipo4.name, equipo5.name, equipo2.name, equipo6.name, equipo1.name, equipo3.name) 
+			+proxPartidos("jue", "19", "JUEVES", equipo3.name, equipo6.name, equipo1.name, equipo4.name, equipo2.name, equipo5.name)

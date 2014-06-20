@@ -1,3 +1,11 @@
+mixin menuEquipos(capitan, equipo, numero)
+	.col-xs-12.col-sm-4.col-md-2
+		.cuadro_intro_hover(class= capitan+"Menu")
+			.caption
+				.blur
+				a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal"+ numero).mayusculas= capitan
+					p.name-T= equipo
+						.ver-completo.font-14px Ver equipo completo
 section#equipos.al100
 	.container.text-center
 		.row
@@ -5,34 +13,12 @@ section#equipos.al100
 				.span3.contTeams.float-L
 					h2 Los equipos
 					center
-						.col-xs-12.col-sm-4.col-md-2
-							.cuadro_intro_hover.ckMenu
-								.caption
-									.blur
-									a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal1").mayusculas #{equipo1.cap}
-										p.name-T #{equipo1.name}
-											.ver-completo.font-14px Ver equipo completo
-						.col-xs-12.col-sm-4.col-md-2
-							.cuadro_intro_hover.darioMenu
-								.caption
-									.blur
-									a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal2").mayusculas #{equipo2.cap}
-										p.name-T #{equipo2.name}
-											.ver-completo.font-14px Ver equipo completo
-						.col-xs-12.col-sm-4.col-md-2
-							.cuadro_intro_hover.alanMenu
-								.caption
-									.blur
-									a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal3").mayusculas #{equipo3.cap}
-										p.name-T #{equipo3.name}
-											.ver-completo.font-14px Ver equipo completo
-						.col-xs-12.col-sm-4.col-md-2
-							.cuadro_intro_hover.fyrMenu
-								.caption
-									.blur
-									a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal4").mayusculas #{equipo4.cap}
-										p.name-T #{equipo4.name}
-											.ver-completo.font-14px Ver equipo completo
+						+menuEquipos(equipo1.cap, equipo1.name, "1")
+						+menuEquipos(equipo2.cap, equipo2.name, "2")
+						+menuEquipos(equipo3.cap, equipo3.name, "3")
+						+menuEquipos(equipo4.cap, equipo4.name, "4")
+						//+menuEquipos(equipo5.cap, equipo5.name, "5")
+						//+menuEquipos(equipo6.cap, equipo6.name, "6")	
 						.col-xs-12.col-sm-4.col-md-2
 							.cuadro_intro_hover.ozzMenu
 								p
