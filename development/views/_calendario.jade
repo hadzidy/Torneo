@@ -1,317 +1,81 @@
+- var classtdMain = ['pad-table', 'non-border', 'limit']
+- var classtdEspecific = ['pad-con-table', 'non-border']
+
+mixin equiposPartido(horario1, horario2, horario3, equipo1, equipo2, equipo3, equipo4, equipo5, equipo6, vs, vs2, vs3)
+	tr
+		td(class=classtdMain)
+			table.no-margin
+				td(class=classtdEspecific).hours= horario1
+				td(class=classtdEspecific).teamys= equipo1
+				td(class=classtdEspecific).vs= vs
+				td(class=classtdEspecific).teamys= equipo2
+		td(class=classtdMain)
+			table.no-margin
+				td(class=classtdEspecific).hours= horario2
+				td(class=classtdEspecific).teamys= equipo3
+				td(class=classtdEspecific).vs= vs2
+				td(class=classtdEspecific).teamys= equipo4
+		td(class=classtdMain)
+			table.no-margin
+				td(class=classtdEspecific).hours= horario3
+				td(class=classtdEspecific).teamys= equipo5
+				td(class=classtdEspecific).vs= vs3
+				td(class=classtdEspecific).teamys= equipo6
+mixin jornadas(jor1, jor2, jor3, fecha1, fecha2, fecha3)
+	thead
+		tr
+			th(class=classtdMain).jornadas  
+				.tit-jornada.font-24px= jor1
+				.subtit-jornada.font-18px= fecha1
+			th(class=classtdMain).jornadas  
+				.tit-jornada.font-24px= jor2
+				.subtit-jornada.font-18px= fecha2
+			th(class=classtdMain).jornadas 
+				.tit-jornada.font-24px= jor3
+				.subtit-jornada.font-18px= fecha3
+mixin ranking(puesto, equipo, color)
+	.contenedor-mov.black
+		.contenedor_hover(class=color"1")
+			.puesto= puesto
+		.equipo-lugar(class=color) 
+			.expandir.font-14px Ver
+			.equipos-ranki equipo
+
 section#calendario.al100.page-scroll.total-container
 	.centerbottom-top.pos-absoluta.column-10
 		.contenedor-calendar.centerbottom-top
 			table.calendar-table.no-margin
-				thead
-					tr
-						th.pad-table.non-border.jornadas.limit  
-							.tit-jornada.font-24px JORNADA 1
-							.subtit-jornada.font-18px Lunes 16 de Junio
-						th.pad-table.non-border.jornadas.limit  
-							.tit-jornada.font-24px JORNADA 2
-							.subtit-jornada.font-18px Martes 17 de Junio
-						th.pad-table.non-border.jornadas.limit  
-							.tit-jornada.font-24px JORNADA 3
-							.subtit-jornada.font-18px Jueves 19 de Junio 
+				+jornadas("JORNADA 1", "JORNADA 2", "JORNADA 3", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio")
 				tbody
-					tr
-						td.pad-table.non-border.limit 
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.uno} 
-								td.pad-con-table.non-border.teamys #{equipo1.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo2.name}  
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.uno}
-								td.pad-con-table.non-border.teamys #{equipo4.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo5.name} 
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.uno}
-								td.pad-con-table.non-border.teamys #{equipo3.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo6.name} 
-					tr
-						td.pad-table.non-border.limit 
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.dos}
-								td.pad-con-table.non-border.teamys #{equipo3.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo4.name}  
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.dos}
-								td.pad-con-table.non-border.teamys #{equipo2.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo6.name} 
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.dos}
-								td.pad-con-table.non-border.teamys #{equipo1.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo4.name} 
-					tr
-						td.pad-table.non-border.limit 
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.tres}
-								td.pad-con-table.non-border.teamys #{equipo5.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo6.name}  
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.tres}
-								td.pad-con-table.non-border.teamys #{equipo1.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo3.name} 
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.tres}
-								td.pad-con-table.non-border.teamys #{equipo2.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo5.name}
-				thead
-					tr
-						th.pad-table.non-border.jornadas.limit 
-							.tit-jornada.font-24px JORNADA 3
-							.subtit-jornada.font-18px Lunes 23 de Junio
-						th.pad-table.non-border.jornadas.limit 
-							.tit-jornada.font-24px JORNADA 4
-							.subtit-jornada.font-18px Martes 24 de Junio
-						th.pad-table.non-border.jornadas.limit 
-							.tit-jornada.font-24px JORNADA 5
-							.subtit-jornada.font-18px Jueves 26 de Junio 
+					+equiposPartido(horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs") 
+					+equiposPartido(horarios.dos, horarios.dos, horarios.dos, equipo3.name, equipo4.name, equipo2.name, equipo6.name, equipo1.name, equipo4.name, "vs", "vs", "vs") 
+					+equiposPartido(horarios.tres, horarios.tres, horarios.tres, equipo5.name, equipo6.name, equipo1.name, equipo3.name, equipo2.name, equipo5.name, "vs", "vs", "vs") 
+				+jornadas("JORNADA 4", "JORNADA 5", "JORNADA 6", "Lunes, 23 de Junio", "Martes, 24 de Junio", "Jueves, 26 de Junio")
 				tbody
-					tr
-						td.pad-table.non-border.limit 
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.uno}
-								td.pad-con-table.non-border.teamys #{equipo1.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo5.name}  
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.uno}
-								td.pad-con-table.non-border.teamys #{equipo2.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo4.name} 
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.uno}
-								td.pad-con-table.non-border.teamys #{equipo2.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo1.name} 
-					tr
-						td.pad-table.non-border.limit 
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.dos}
-								td.pad-con-table.non-border.teamys #{equipo2.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo3.name}  
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.dos}
-								td.pad-con-table.non-border.teamys #{equipo1.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo6.name} 
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.dos}
-								td.pad-con-table.non-border.teamys #{equipo4.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo3.name} 
-					tr
-						td.pad-table.non-border.limit 
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.tres}
-								td.pad-con-table.non-border.teamys #{equipo4.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo6.name}  
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.tres}
-								td.pad-con-table.non-border.teamys #{equipo3.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo5.name} 
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.tres}
-								td.pad-con-table.non-border.teamys #{equipo6.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo5.name}
-				thead
-					tr
-						th.pad-table.non-border.jornadas.limit 
-							.tit-jornada.font-24px JORNADA 7
-							.subtit-jornada.font-18px Lunes 30 de Junio
-						th.pad-table.non-border.jornadas.limit 
-							.tit-jornada.font-24px JORNADA 8
-							.subtit-jornada.font-18px Martes 1 de Julio
-						th.pad-table.non-border.jornadas.limit 
-							.tit-jornada.font-24px JORNADA 9
-							.subtit-jornada.font-18px Jueves 3 de Julio 
+					+equiposPartido(horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo5.name, equipo2.name, equipo4.name, equipo2.name, equipo1.name, "vs", "vs", "vs")
+					+equiposPartido(horarios.dos, horarios.dos, horarios.dos, equipo2.name, equipo3.name, equipo1.name, equipo6.name, equipo4.name, equipo3.name, "vs", "vs", "vs") 
+					+equiposPartido(horarios.tres, horarios.tres, horarios.tres, equipo4.name, equipo6.name, equipo3.name, equipo5.name, equipo6.name, equipo5.name, "vs", "vs", "vs")
+				+jornadas("JORNADA 7", "JORNADA 8", "JORNADA 9", "Lunes, 30 de Junio", "Martes, 1 de Julio", "Jueves, 3 de Julio")
 				tbody
-					tr
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.uno}
-								td.pad-con-table.non-border.teamys #{equipo5.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo4.name}  
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.uno}
-								td.pad-con-table.non-border.teamys #{equipo6.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo3.name} 
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.uno}
-								td.pad-con-table.non-border.teamys #{equipo5.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo1.name} 
-					tr
-						td.pad-table.non-border.limit 
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.dos}
-								td.pad-con-table.non-border.teamys #{equipo6.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo2.name}  
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.dos}
-								td.pad-con-table.non-border.teamys #{equipo4.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo1.name} 
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.dos}
-								td.pad-con-table.non-border.teamys #{equipo3.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo2.name} 
-					tr
-						td.pad-table.non-border.limit 
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.tres}
-								td.pad-con-table.non-border.teamys #{equipo3.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo1.name}  
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.tres}
-								td.pad-con-table.non-border.teamys #{equipo5.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo2.name} 
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.tres}
-								td.pad-con-table.non-border.teamys #{equipo6.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo4.name}
-				thead
-					tr
-						th.pad-table.non-border.jornadas.limit 
-							.tit-jornada.font-24px JORNADA 10
-							.subtit-jornada.font-18px Lunes 7 de Julio
-						th.pad-table.non-border.jornadas.limit 
-							.tit-jornada.font-24px POR EL HONOR
-							.subtit-jornada.font-18px Martes 8 de Julio
-						th.pad-table.non-border.jornadas.limit
-							.tit-jornada.font-24px POR EL 3er LUGAR
-							.subtit-jornada.font-18px Jueves 10 de Julio 
+					+equiposPartido(horarios.uno, horarios.uno, horarios.uno, equipo5.name, equipo4.name, equipo6.name, equipo3.name, equipo5.name, equipo1.name, "vs", "vs", "vs")
+					+equiposPartido(horarios.dos, horarios.dos, horarios.dos, equipo6.name, equipo2.name, equipo4.name, equipo1.name, equipo3.name, equipo2.name, "vs", "vs", "vs") 
+					+equiposPartido(horarios.tres, horarios.tres, horarios.tres, equipo3.name, equipo1.name, equipo5.name, equipo2.name, equipo6.name, equipo4.name, "vs", "vs", "vs")
+				+jornadas("JORNADA 10", "POR EL HONOR", "POR EL 3er LUGAR", "Lunes, 7 de Julio", "Martes, 8 de Julio", "Jueves, 10 de Julio")
 				tbody
-					tr
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.uno}
-								td.pad-con-table.non-border.teamys #{equipo4.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo2.name}  
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.tres}
-								td.pad-con-table.non-border.teamys 5to Puesto
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys 6to Puesto 
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.tres}
-								td.pad-con-table.non-border.teamys Perdedor semi 1
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys Perdedor semi 2
-					tr
-						td.pad-table.non-border.limit 
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.dos}
-								td.pad-con-table.non-border.teamys #{equipo6.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo1.name}  
-					tr
-						td.pad-table.non-border.limit 
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.tres}
-								td.pad-con-table.non-border.teamys #{equipo5.name}
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys #{equipo3.name}
-				thead
-					tr
-						th.pad-table.non-border.jornadas.limit 
-							.tit-jornada.font-24px SEMIFINALES
-							.subtit-jornada.font-18px Martes 8 de Julio
-						th.pad-table.non-border.jornadas.limit 
-							.tit-jornada.font-24px FINAL
-							.subtit-jornada.font-18px Jueves 10 de JuLio 
+					+equiposPartido(horarios.uno, horarios.uno, horarios.uno, equipo4.name, equipo2.name, "5to Puesto", "6to Puesto", "Perdedor semi 1", "Perdedor semi 2", "vs", "vs", "vs")
+					+equiposPartido(horarios.dos, "", "", equipo6.name, equipo1.name, "", "", "", "", "vs", "", "") 
+					+equiposPartido(horarios.tres, "", "", equipo5.name, equipo3.name, "", "", "", "", "vs", "", "")
+				+jornadas("", "SEMIFINALES", "FINAL", "", "Martes, 8 de Julio", "Jueves, 10 de Julio")
 				tbody
-					tr
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.dos}
-								td.pad-con-table.non-border.teamys 1er Lugar
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys 4to Lugar 
-						td.pad-table.non-border.limit
-							table.no-margin
-								td.pad-con-table.non-border.hours #{horarios.dos}
-								td.pad-con-table.non-border.teamys Ganador Semi 1
-								td.pad-con-table.non-border.vs vs
-								td.pad-con-table.non-border.teamys Ganador Semi 2
+					+equiposPartido("", horarios.dos, horarios.uno, "", "", "1er Puesto", "4to Puesto", "Ganador semi 1", "Ganador semi 2", "", "vs", "vs")
+					+equiposPartido("", horarios.tres, "", "", "" ,"2do Puesto", "3er Puesto", "", "", "", "vs", "") 
+					+equiposPartido("", "", "", "", "", "", "", "", "", "", "", "")
 	.columnas-12
 		.contenedor-ranking.centerbottom-top
 			h3 RANKING
-			.contenedor-mov.black
-				.contenedor_hover.lun1
-					.puesto 1er LUGAR
-				.equipo-lugar.lun 
-					.expandir.font-14px Ver
-					.equipos-ranki #{equipo1.name}
-			.contenedor-mov.black
-				.contenedor_hover.lun1
-					.puesto 2do LUGAR
-				.equipo-lugar.lun 
-					.expandir.font-14px Ver
-					.equipos-ranki #{equipo6.name}
-			.contenedor-mov.black
-				.contenedor_hover.mar1
-					.puesto 3er LUGAR
-				.equipo-lugar.mar 
-					.expandir.font-14px Ver
-					.equipos-ranki #{equipo3.name}																				 														
-			.contenedor-mov.black
-				.contenedor_hover.mar1
-					.puesto 4to LUGAR
-				.equipo-lugar.mar 
-					.expandir.font-14px Ver
-					.equipos-ranki #{equipo5.name}
-			.contenedor-mov.black
-				.contenedor_hover.jue1
-					.puesto 5to LUGAR
-				.equipo-lugar.jue 
-					.expandir.font-14px Ver
-					.equipos-ranki #{equipo2.name}
-			.contenedor-mov.black
-				.contenedor_hover.jue1
-					.puesto 6to LUGAR
-				.equipo-lugar.jue 
-					.expandir.font-14px Ver
-					.equipos-ranki #{equipo4.name}						
+			+ranking("1er LUGAR", equipo1.name, "lun")
+			+ranking("2do LUGAR", equipo3.name, "lun")
+			+ranking("3ro LUGAR", equipo5.name, "mar")
+			+ranking("4to LUGAR", equipo2.name, "mar")
+			+ranking("5to LUGAR", equipo6.name, "jue")
+			+ranking("6to LUGAR", equipo4.name, "jue")

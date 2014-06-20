@@ -4624,6 +4624,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/development\/views\/partials\/_nav-bar.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/development\/views\/partials\/_nav-bar.jade",
+		"outputAbbreviatedPath": "\/public\/_nav-bar.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
 	"\/public\/css\/_scroll.css": {
 		"fileType": 16,
 		"ignore": 1,
