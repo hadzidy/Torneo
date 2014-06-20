@@ -24,6 +24,7 @@ mixin equiposPartido(horario1, horario2, horario3, equipo1, equipo2, equipo3, eq
 mixin jornadas(jor1, jor2, jor3, fecha1, fecha2, fecha3)
 	thead
 		tr
+			
 			th(class=classtdMain).jornadas  
 				.tit-jornada.font-24px= jor1
 				.subtit-jornada.font-18px= fecha1
@@ -35,11 +36,11 @@ mixin jornadas(jor1, jor2, jor3, fecha1, fecha2, fecha3)
 				.subtit-jornada.font-18px= fecha3
 mixin ranking(puesto, equipo, color)
 	.contenedor-mov.black
-		.contenedor_hover(class=color"1")
+		.contenedor_hover(class= color+"1")
 			.puesto= puesto
-		.equipo-lugar(class=color) 
+		.equipo-lugar(class= color) 
 			.expandir.font-14px Ver
-			.equipos-ranki equipo
+			.equipos-ranki= equipo
 
 section#calendario.al100.page-scroll.total-container
 	.centerbottom-top.pos-absoluta.column-10

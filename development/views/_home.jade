@@ -1,3 +1,29 @@
+mixin proxPartidos(dia, day, equipo1, equipo2, equipo3, equipo4, equipo5, equipo6)
+	li.font-24px.no-gutter
+		.cont_hover.black 
+			.lun1.cuadro_contenido= dia 
+				br 
+				.mes.float-L JUNIO
+				.dia.float-R= day
+				hr
+				.horariosXdia.font-18px(style="white-space:pre").float-L 
+					| #{horarios.uno} 
+					| #{horarios.dos}
+					| #{horarios.tres}
+				table.equiposVS.font-14px.float-R
+					tr
+						td.line= equipo1  
+						td.line vs  
+						td.line= equipo2
+					tr
+						td.line= equipo3   
+						td.line vs  
+						td.line= equipo4
+					tr
+						td.line= equipo5   
+						td.line vs  
+						td.line= equipo6 
+
 include partials/_nav-bar
 section#home.al100.total-container.page-scroll
 	.containerNt.outer-container
@@ -5,76 +31,7 @@ section#home.al100.total-container.page-scroll
 	.columnas-12.menu-partidos-week
 		ul
 			br
-			li.font-24px.no-gutter.estatic.prox PARTIDOS DE LA SEMANA: 
-			li.font-24px.no-gutter
-				.cont_hover.black 
-					.lun1.cuadro_contenido 16 
-						br 
-						.mes.float-L JUNIO
-						.dia.float-R LUNES
-						hr
-						.horariosXdia.font-18px(style="white-space:pre").float-L 
-							| #{horarios.uno} 
-							| #{horarios.dos}
-							| #{horarios.tres}
-						table.equiposVS.font-14px.float-R
-							tr
-								td.line #{equipo1.name}  
-								td.line vs  
-								td.line #{equipo2.name}
-							tr
-								td.line #{equipo3.name}  
-								td.line vs  
-								td.line #{equipo4.name}
-							tr
-								td.line #{equipo5.name}  
-								td.line vs  
-								td.line #{equipo6.name}
-			li.font-24px.no-gutter
-				.cont_hover.black
-					.mar1.cuadro_contenido 17
-						br 
-						.mes.float-L JUNIO 
-						.dia.float-R MARTES
-						hr
-						.horariosXdia.font-18px(style="white-space:pre").float-L 
-							| #{horarios.uno} 
-							| #{horarios.dos}
-							| #{horarios.tres}
-						table.equiposVS.font-14px.float-R
-							tr
-								td.line #{equipo4.name}  
-								td.line vs  
-								td.line #{equipo5.name}
-							tr
-								td.line #{equipo2.name}  
-								td.line vs  
-								td.line #{equipo6.name}
-							tr
-								td.line #{equipo1.name}  
-								td.line vs  
-								td.line #{equipo3.name}
-			li.font-24px.no-gutter
-				.cont_hover.black
-					.jue1.cuadro_contenido 18
-						br 
-						.mes.float-L JUNIO 
-						.dia.float-R JUEVES
-						hr
-						.horariosXdia.font-18px(style="white-space:pre").float-L
-							| #{horarios.uno} 
-							| #{horarios.dos}
-							| #{horarios.tres}
-						table.equiposVS.font-14px.float-R
-							tr
-								td.line #{equipo3.name}  
-								td.line vs  
-								td.line #{equipo6.name}
-							tr
-								td.line #{equipo1.name}  
-								td.line vs  
-								td.line #{equipo4.name}
-							tr
-								td.line #{equipo2.name}  
-								td.line vs  
-								td.line #{equipo5.name}
+			li.font-24px.no-gutter.estatic.prox PARTIDOS DE LA SEMANA:
+			+proxPartidos("16", "LUNES", equipo1.name, equipo2.name, equipo3.name, equipo4.name, equipo5.name, equipo5.name) 
+			+proxPartidos("17", "MARTES", equipo4.name, equipo5.name, equipo2.name, equipo6.name, equipo1.name, equipo3.name) 
+			+proxPartidos("19", "JUEVES", equipo3.name, equipo6.name, equipo1.name, equipo4.name, equipo2.name, equipo5.name)
