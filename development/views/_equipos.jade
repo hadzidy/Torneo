@@ -1,3 +1,9 @@
+-var integrantesTeam1 = ["Marcela / Jader / Javi / Pablo / Robert"]
+-var integrantesTeam2 = ["Tamara / Xac / Aldo / Charly B / Greco / Montoya"]
+-var integrantesTeam3 = ["Hadzidy / Marissa / Fide / Ulises / Yushell / Zpectrito"]
+-var integrantesTeam4 = ["Cecy / Mariel / Gabo / Licea / Wolf / Zacatenco"]
+-var integrantesTeam5 = ["Juanita / Maru / Martín / Matt / Mike / Redo"]
+-var integrantesTeam6 = ["Mariana / Adrián / Joel / Pingo / Pollito / Roco"]
 mixin menuEquipos(capitan, equipo, numero)
 	.col-xs-12.col-sm-4.col-md-2
 		.cuadro_intro_hover(class= capitan+"Menu")
@@ -6,6 +12,24 @@ mixin menuEquipos(capitan, equipo, numero)
 				a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal"+ numero).mayusculas= capitan
 					p.name-T= equipo
 						.ver-completo.font-14px Ver equipo completo
+mixin modalEquipos(numero, cap, equipo, integrantes, win, lost)
+	.modal.fade(id="myModal"+ numero tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+		.modal-dialog.caja-flotante
+			.modal-content.noRoundBorders
+				.modal-header
+					button(type="button" data-dismiss="modal" aria-hidden="true").close
+					h4.modal-title#myModalLabel About team
+				.modal-body(id= cap+"Team")		
+					img(src="img/"+cap+".png").team-pic
+					h3= equipo
+					p= integrantes 
+					.float-L.partidos= pg
+						.score.font-24px= win
+					.float-R.partidos= pl
+						.score.font-24px= lost
+				.modal-footer
+					center
+						button(type="button" data-dismiss="modal").btn.btn-default Cerrar
 section#equipos.al100
 	.container.text-center
 		.row
@@ -37,105 +61,10 @@ section#equipos.al100
 									a.font-24px.caption-text(href="#aboutModal" data-toggle="modal" data-target="#myModal6").mayusculas raúl	
 										p.name-T #{equipo6.name}
 											.ver-completo.font-14px Ver equipo completo
-			.modal.fade#myModal1(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
-				.modal-dialog.caja-flotante
-					.modal-content.noRoundBorders
-						.modal-header
-							button(type="button" data-dismiss="modal" aria-hidden="true").close
-							h4.modal-title#myModalLabel About team
-						.modal-body#ckTeam		
-							img(src="img/ck.png").team-pic
-							h3 #{equipo1.name}
-							p Marcela / Jader / Javi / Pablo / Robert
-							.float-L.partidos= pg
-								.score.font-24px 2
-							.float-R.partidos= pl
-								.score.font-24px 0  
-						.modal-footer
-							center
-								button(type="button" data-dismiss="modal").btn.btn-default Cerrar
-			.modal.fade#myModal2(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
-				.modal-dialog
-					.modal-content.noRoundBorders
-						.modal-header
-							button(type="button" data-dismiss="modal" aria-hidden="true").close
-							h4.modal-title#myModalLabel About team
-						.modal-body#darioTeam
-							img(src="img/dario.png").team-pic
-							h3 #{equipo2.name}
-							p Tamara / Xac / Aldo / Charly B / Greco / Montoya
-							.float-L.partidos= pg
-								.score.font-24px 1
-							.float-R.partidos= pl
-								.score.font-24px 1 
-						.modal-footer
-							center
-								button(type="button" data-dismiss="modal").btn.btn-default Cerrar
-			.modal.fade#myModal3(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
-				.modal-dialog
-					.modal-content.noRoundBorders
-						.modal-header
-							button(type="button" data-dismiss="modal" aria-hidden="true").close
-							h4.modal-title#myModalLabel About team
-						.modal-body#alanTeam
-							img(src="img/alan.png").team-pic
-							h3 #{equipo3.name}
-							p Hadzidy / Marissa / Fide / Ulises / Yushell / Zpectrito
-							.float-L.partidos= pg
-								.score.font-24px 1
-							.float-R.partidos= pl
-								.score.font-24px 1 
-						.modal-footer
-							center
-								button(type="button" data-dismiss="modal").btn.btn-default Cerrar
-			.modal.fade#myModal4(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
-				.modal-dialog
-					.modal-content.noRoundBorders
-						.modal-header
-							button(type="button" data-dismiss="modal" aria-hidden="true").close
-							h4.modal-title#myModalLabel About team
-						.modal-body#fyrTeam
-							img(src="img/fyr.png").team-pic
-							h3 #{equipo4.name}
-							p Cecy / Mariel / Gabo / Licea / Wolf / Zacatenco
-							.float-L.partidos= pg
-								.score.font-24px 0
-							.float-R.partidos= pl
-								.score.font-24px 2  
-						.modal-footer
-							center
-								button(type="button" data-dismiss="modal").btn.btn-default Cerrar
-			.modal.fade#myModal5(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
-				.modal-dialog
-					.modal-content.noRoundBorders
-						.modal-header
-							button(type="button" data-dismiss="modal" aria-hidden="true").close
-							h4.modal-title#myModalLabel About team
-						.modal-body#ozzTeam
-							img(src="img/ozz.png").team-pic
-							h3 #{equipo5.name}
-							p Juanita / Maru / Martín / Matt / Mike / Redo
-							.float-L.partidos= pg
-								.score.font-24px 1
-							.float-R.partidos= pl
-								.score.font-24px 1 
-						.modal-footer
-							center
-								button(type="button" data-dismiss="modal").btn.btn-default Cerrar
-			.modal.fade#myModal6(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
-				.modal-dialog
-					.modal-content.noRoundBorders
-						.modal-header
-							button(type="button" data-dismiss="modal" aria-hidden="true").close
-							h4.modal-title#myModalLabel About team
-						.modal-body#raulTeam
-							img(src="img/raul.png").team-pic
-							h3 #{equipo6.name}
-							p Mariana / Adrián / Joel / Pingo / Pollito / Roco
-							.float-L.partidos= pg
-								.score.font-24px 1
-							.float-R.partidos= pl
-								.score.font-24px 1 
-						.modal-footer
-							center
-								button(type="button" data-dismiss="modal").btn.btn-default Cerrar
+			+modalEquipos("1", equipo1.cap, equipo1.name, integrantesTeam1, "2", "0")
+			+modalEquipos("2", equipo2.cap, equipo2.name, integrantesTeam2, "1", "1")
+			+modalEquipos("3", equipo3.cap, equipo3.name, integrantesTeam3, "1", "1")
+			+modalEquipos("4", equipo4.cap, equipo4.name, integrantesTeam4, "0", "2")
+			+modalEquipos("5", equipo5.cap, equipo5.name, integrantesTeam5, "1", "1")
+			+modalEquipos("6", equipo6.cap, equipo6.name, integrantesTeam6, "1", "1")
+			
