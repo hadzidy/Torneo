@@ -167,6 +167,7 @@
 	height: 80px;
 	padding: 8px;
 	min-width: 465px;
+	width: 100%;
 }
 .table-resp{
 	width: 25%;
@@ -187,4 +188,17 @@
 .vs-resp{
 	width: 25px;
 }
-
+.center-resp{
+	width: 450px;
+	height: 60px;
+	position: relative;
+	right: 0;
+	left: 0;
+	text-align: center;
+	margin: auto;
+}
+.white-black{
+	color: white;
+	background: black;
+	text-align: center;
+}
