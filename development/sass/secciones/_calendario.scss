@@ -1,3 +1,6 @@
+#calendario{
+
+}
 .pad-con-table{
 	padding:0 2px 0 2px; 
 }
@@ -7,16 +10,17 @@
 	right: 0;
 	height: 60%;
 	position: absolute;
-	background: rgba(0,0,0,0.6);
-	border: 2px white solid;
+	//background: rgba(0,0,0,0.6);
+	//border: 2px white solid;
 	padding: 20px 0 20px 20px;
 	vertical-align: middle;
 	min-height: 567px;
 	min-width: 340px;
-	overflow: auto;
 }
 .calendar-table{
 	padding-left: 20px;
+	border: 1px solid white;
+	background: rgba(0,0,0,0.6);
 }
 .vs{
 	width: 20px;
@@ -116,4 +120,10 @@
 	margin: auto;
 	position: relative;
 	height: 430px;
+}
+.font-13px{
+	font-size: 12px;
+	padding-left: 0;
+} 
+.border {
 }
