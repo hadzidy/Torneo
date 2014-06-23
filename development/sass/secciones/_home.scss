@@ -26,6 +26,10 @@
 		left: 0;
 		right: 0; 
 		margin: auto;
+		@include media(min-width 0px max-width 1110px){
+			top: 25%;
+			bottom: 50%;
+		} 
 	}
 
 	a{
@@ -140,3 +144,47 @@
 		height: 16px;
 	}
 }
+.menu-partidos-week-resp{
+	bottom: 0px;
+	position: absolute;
+	@include media(min-width 1110px){
+				visibility: hidden;
+				
+
+//	ul{
+//		font-weight: bold;
+//		font-size: 20px;
+//
+//		li{
+//			bottom: 0px;
+//			@include media(min-width 0px max-width 1240px){
+//				font-size: 18px;
+//			} 
+//		}
+	}			
+}
+.contenedores-por-dia{
+	height: 80px;
+	padding: 8px;
+	min-width: 465px;
+}
+.table-resp{
+	width: 25%;
+	position: relative;
+	left: 5%;
+	margin: auto;
+	line-height: 9px;
+	min-width: 253px;
+}
+.dia{
+	font-weight: bold;
+	line-height: 26px;
+	font-size: 28px;
+}
+.resp-team{
+	width: 105px;
+}
+.vs-resp{
+	width: 25px;
+}
+

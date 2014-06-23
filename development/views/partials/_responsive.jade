@@ -1,0 +1,30 @@
+mixin proxPartidosResponsive(color, dia, day, equipo1, equipo2, equipo3, equipo4, equipo5, equipo6)
+	li.font-24px
+		.contenedores-por-dia(class=color+"1").float-L
+			.float-L= dia +"/ JUNIO"
+				.dia= day
+			.font-18px(style="white-space:pre; margin-left: 5%; line-height: 22px;").float-L
+				| #{horarios.uno} 
+				| #{horarios.dos}
+				| #{horarios.tres}
+			table.font-14px.float-L.table-resp
+				tr(style="line-height: 0px")
+					td.line.resp-team= equipo1  
+					td.line.vs-resp vs  
+					td.line.resp-team= equipo2
+				tr
+					td.line.resp-team= equipo3   
+					td.line.vs-resp vs  
+					td.line.resp-team= equipo4
+				tr
+					td.line.resp-team= equipo5   
+					td.line.vs-resp vs  
+					td.line.resp-team= equipo6 
+
+.columnas-12.menu-partidos-week-resp.black
+	ul
+		br
+		li.font-24px PARTIDOS DE LA SEMANA:
+		+proxPartidosResponsive("lun", "23", "LUNES", equipo1.name, equipo5.name, equipo2.name, equipo3.name, equipo4.name, equipo6.name) 
+		+proxPartidosResponsive("mar", "24", "MARTES", equipo2.name, equipo4.name, equipo1.name, equipo6.name, equipo3.name, equipo5.name) 
+		+proxPartidosResponsive("jue", "26", "JUEVES", equipo2.name, equipo1.name, equipo4.name, equipo3.name, equipo6.name, equipo5.name)

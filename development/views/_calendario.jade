@@ -1,26 +1,46 @@
 - var classtdMain = ['pad-table', 'non-border', 'limit']
 - var classtdEspecific = ['pad-con-table', 'non-border']
 
+//mixin equiposPartido(horario1, horario2, horario3, equipo1, equipo2, equipo3, equipo4, equipo5, equipo6, vs, vs2, vs3)
+//	tr
+//		td(class=classtdMain)
+//			table.no-margin
+//				td(class=classtdEspecific).hours= horario1
+//				td(class=classtdEspecific).teamys= equipo1
+//				td(class=classtdEspecific).vs= vs
+//				td(class=classtdEspecific).teamys= equipo2
+//		td(class=classtdMain)
+//			table.no-margin
+//				td(class=classtdEspecific).hours= horario2
+//				td(class=classtdEspecific).teamys= equipo3
+//				td(class=classtdEspecific).vs= vs2
+//				td(class=classtdEspecific).teamys= equipo4
+//		td(class=classtdMain)
+//			table.no-margin
+//				td(class=classtdEspecific).hours= horario3
+//				td(class=classtdEspecific).teamys= equipo5
+//				td(class=classtdEspecific).vs= vs3
+//				td(class=classtdEspecific).teamys= equipo6
 mixin equiposPartido(horario1, horario2, horario3, equipo1, equipo2, equipo3, equipo4, equipo5, equipo6, vs, vs2, vs3)
 	tr
-		td(class=classtdMain)
-			table.no-margin
-				td(class=classtdEspecific).hours= horario1
-				td(class=classtdEspecific).teamys= equipo1
-				td(class=classtdEspecific).vs= vs
-				td(class=classtdEspecific).teamys= equipo2
-		td(class=classtdMain)
-			table.no-margin
-				td(class=classtdEspecific).hours= horario2
-				td(class=classtdEspecific).teamys= equipo3
-				td(class=classtdEspecific).vs= vs2
-				td(class=classtdEspecific).teamys= equipo4
-		td(class=classtdMain)
-			table.no-margin
-				td(class=classtdEspecific).hours= horario3
-				td(class=classtdEspecific).teamys= equipo5
-				td(class=classtdEspecific).vs= vs3
-				td(class=classtdEspecific).teamys= equipo6
+		td
+			table
+				td= horario1
+				td= equipo1
+				td vs
+				ts= equipo2
+		td
+			table
+				td= horario2
+				td= equipo3
+				td= vs2
+				td= equipo4
+		td
+			table
+				td= horario3
+				td= equipo5
+				td= vs3
+				td= equipo6
 mixin jornadas(jor1, jor2, jor3, fecha1, fecha2, fecha3)
 	thead
 		tr
