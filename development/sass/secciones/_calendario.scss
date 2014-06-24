@@ -12,10 +12,8 @@
 	position: absolute;
 	background: rgba(0,0,0,0.6);
 	border: 2px white solid;
-	padding: 20px 0 20px 20px;
 	vertical-align: middle;
-	min-height: 567px;
-	min-width: 340px;
+	font-size: 16px;
 }
 .calendar-table{
 	padding-left: 20px;
@@ -126,6 +124,25 @@
 	padding-left: 0;
 } 
 
+a.is-active{
+	color: red;
+}
+.cont-jour{
+	border: 1px solid white;
+	width: 15%;
+	height: 7.14%;
+	text-align: center;
+	padding-top: 6px;
+}
+.cont-games{
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	right: 0;
+	width: 85%;
+	height: 50%;
+	text-align: center;
+}
 
-
-// Based on code by Jett Miller jettmiller.net

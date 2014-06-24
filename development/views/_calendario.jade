@@ -1,12 +1,14 @@
 - var classtdMain = ['pad-table', 'non-border', 'limit']
 - var classtdEspecific = ['pad-con-table', 'non-border']
-mixin jornadasTits( num, journey, date)
-	a(href="#" rel="tab"+ num).js-vertical-tab.vertical-tab= journey
-		p= date
+mixin jornadasTits( num, journey)
+	.cont-jour
+		a(href="#" rel="tab"+ num).formato-jour.js-vertical-tab.vertical-tab= journey
+			br
 	
-mixin games(tits ,num ,horario1, horario2, horario3, equipo1, equipo2, equipo3, equipo4, equipo5, equipo6, vs, vs2, vs3)
-	a(href="" rel="rel"+ num).js-vertical-tab-accordion-heading.vertical-tab-accordion-heading.is-active
-	.js-vertical-tab-content.vertical-tab-content(id="tab"+ num)
+mixin games(date,tits ,num ,horario1, horario2, horario3, equipo1, equipo2, equipo3, equipo4, equipo5, equipo6, vs, vs2, vs3)
+	a(href="" rel="rel"+ num).js-vertical-tab-accordion-heading.vertical-tab-accordion-heading.formato-jour
+	.js-vertical-tab-content.vertical-tab-content.float-R.cont-games(id="tab"+ num)
+		.date-games= date
 		div(style="clear: left")
 			div.col-md-2.col-sm-2.col-xs-12.border= horario1
 			div.col-md-4.col-sm-4.col-xs-5.border= equipo1
@@ -34,16 +36,26 @@ section#calendario.al100.page-scroll.total-container
 	.centerbottom-top.pos-absoluta.column-10
 		.contenedor-calendar.centerbottom-top
 			.vertical-tabs-container
-				+jornadasTits("1", "JORNADA 1", "LUNES 16 de junio")
-				+jornadasTits("2", "JORNADA 2", "MARTES 17 de junio")
-				+jornadasTits("3", "JORNADA 3", "JUEVES 19 de junio")
-				+jornadasTits("4", "JORNADA 4", "LUNES 23 de junio")
+				+jornadasTits("1", "JORNADA 1")
+				+jornadasTits("2", "JORNADA 2")
+				+jornadasTits("3", "JORNADA 3")
+				+jornadasTits("4", "JORNADA 4")
+				+jornadasTits("5", "JORNADA 1")
+				+jornadasTits("6", "JORNADA 2")
+				+jornadasTits("7", "JORNADA 3")
+				+jornadasTits("8", "JORNADA 4")
+				+jornadasTits("9", "JORNADA 1")
+				+jornadasTits("10", "JORNADA 2")
+				+jornadasTits("11", "JORNADA 3")
+				+jornadasTits("12", "JORNADA 4")
+				+jornadasTits("13", "JORNADA 1")
+				+jornadasTits("14", "JORNADA 2")												
 			.vertical-tab-content-container
-				+games("JORNADA 1", "1", "7:30pm", "8:30pm", "9:30pm", equipo1.name, equipo6.name, equipo3.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
-				+games("JORNADA 2", "2", "7:30pm", "8:30pm", "9:30pm", equipo3.name, equipo5.name, equipo5.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
-				+games("JORNADA 3", "3", "7:30pm", "8:30pm", "9:30pm", equipo4.name, equipo4.name, equipo5.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
-				+games("JORNADA 4", "4", "7:30pm", "8:30pm", "9:30pm", equipo6.name, equipo3.name, equipo5.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
-				+games("JORNADA 5", "5", "7:30pm", "8:30pm", "9:30pm", equipo2.name, equipo2.name, equipo5.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
+				+games("LUNES 16 de Junio","JORNADA 1", "1", "7:30pm", "8:30pm", "9:30pm", equipo1.name, equipo6.name, equipo3.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
+				+games("MARTES 16 de Junio", "JORNADA 2", "2", "7:30pm", "8:30pm", "9:30pm", equipo3.name, equipo5.name, equipo5.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
+				+games("LUNES 16 de Junio", "JORNADA 3", "3", "7:30pm", "8:30pm", "9:30pm", equipo4.name, equipo4.name, equipo5.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
+				+games("LUNES 16 de Junio", "JORNADA 4", "4", "7:30pm", "8:30pm", "9:30pm", equipo6.name, equipo3.name, equipo5.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
+				+games("LUNES 16 de Junio", "JORNADA 5", "5", "7:30pm", "8:30pm", "9:30pm", equipo2.name, equipo2.name, equipo5.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
 	.columnas-12
 		.contenedor-ranking.centerbottom-top
 			h3 RANKING
