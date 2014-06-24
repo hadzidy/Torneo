@@ -1,24 +1,28 @@
 - var classtdMain = ['pad-table', 'non-border', 'limit']
 - var classtdEspecific = ['pad-con-table', 'non-border']
-mixin jornadas(jor1, fecha1, fecha2, fecha3, horario1, horario2, horario3, equipo1, equipo2, equipo3, equipo4, equipo5, equipo6, vs, vs2, vs3)
-	div.col-lg-4.col-md-6.col-sm-12.font-13px.float-L
-		div= jor1
-		div= fecha1
+mixin jornadasTits( num, journey, date)
+	a(href="#" rel="tab"+ num).js-vertical-tab.vertical-tab= journey
+		p= date
+	
+mixin games(tits ,num ,horario1, horario2, horario3, equipo1, equipo2, equipo3, equipo4, equipo5, equipo6, vs, vs2, vs3)
+	a(href="" rel="rel"+ num).js-vertical-tab-accordion-heading.vertical-tab-accordion-heading.is-active
+	.js-vertical-tab-content.vertical-tab-content(id="tab"+ num)
 		div(style="clear: left")
 			div.col-md-2.col-sm-2.col-xs-12.border= horario1
 			div.col-md-4.col-sm-4.col-xs-5.border= equipo1
 			div.col-md-1.col-sm-1.col-xs-2.border.border vs
 			div.col-md-4.col-sm-4.col-xs-5.border.border= equipo2
 		div(style="clear: left")
-			div.col-md-2.col-sm-2.col-xs-12.border= horario1
-			div.col-md-4.col-sm-4.col-xs-5.border= equipo1
+			div.col-md-2.col-sm-2.col-xs-12.border= horario2
+			div.col-md-4.col-sm-4.col-xs-5.border= equipo3
 			div.col-md-1.col-sm-1.col-xs-2.border.border vs
-			div.col-md-4.col-sm-4.col-xs-5.border.border= equipo2
+			div.col-md-4.col-sm-4.col-xs-5.border.border= equipo4
 		div(style="clear: left")
-			div.col-md-2.col-sm-2.col-xs-12.border= horario1
-			div.col-md-4.col-sm-4.col-xs-5.border= equipo1
+			div.col-md-2.col-sm-2.col-xs-12.border= horario3
+			div.col-md-4.col-sm-4.col-xs-5.border= equipo5
 			div.col-md-1.col-sm-1.col-xs-2.border.border vs
-			div.col-md-4.col-sm-4.col-xs-5.border.border= equipo2
+			div.col-md-4.col-sm-4.col-xs-5.border.border= equipo6
+
 mixin ranking(puesto, equipo, color)
 	.contenedor-mov.black
 		.contenedor_hover(class= color+"1")
@@ -29,21 +33,17 @@ mixin ranking(puesto, equipo, color)
 section#calendario.al100.page-scroll.total-container
 	.centerbottom-top.pos-absoluta.column-10
 		.contenedor-calendar.centerbottom-top
-			.calendar-table.no-margin.col-lg-12.col-md-12.col-sm-12.col-xs-12.centerbottom-top
-				+jornadas("JORNADA 1", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio", horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs")
-				+jornadas("JORNADA 2", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio", horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs")
-				+jornadas("JORNADA 3", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio", horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs")
-				+jornadas("JORNADA 4", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio", horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs")
-				+jornadas("JORNADA 5", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio", horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs")
-				+jornadas("JORNADA 6", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio", horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs")
-				+jornadas("JORNADA 7", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio", horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs")
-				+jornadas("JORNADA 8", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio", horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs")
-				+jornadas("JORNADA 9", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio", horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs")
-				+jornadas("JORNADA 10", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio", horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs")
-				+jornadas("JORNADA 11", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio", horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs")
-				+jornadas("JORNADA 12", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio", horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs")
-				+jornadas("JORNADA 13", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio", horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs")
-				+jornadas("JORNADA 14", "Lunes, 16 de Junio", "Martes, 17 de Junio", "Jueves, 19 de Junio", horarios.uno, horarios.uno, horarios.uno, equipo1.name, equipo2.name, equipo4.name, equipo5.name, equipo3.name, equipo6.name, "vs", "vs", "vs")
+			.vertical-tabs-container
+				+jornadasTits("1", "JORNADA 1", "LUNES 16 de junio")
+				+jornadasTits("2", "JORNADA 2", "MARTES 17 de junio")
+				+jornadasTits("3", "JORNADA 3", "JUEVES 19 de junio")
+				+jornadasTits("4", "JORNADA 4", "LUNES 23 de junio")
+			.vertical-tab-content-container
+				+games("JORNADA 1", "1", "7:30pm", "8:30pm", "9:30pm", equipo1.name, equipo6.name, equipo3.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
+				+games("JORNADA 2", "2", "7:30pm", "8:30pm", "9:30pm", equipo3.name, equipo5.name, equipo5.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
+				+games("JORNADA 3", "3", "7:30pm", "8:30pm", "9:30pm", equipo4.name, equipo4.name, equipo5.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
+				+games("JORNADA 4", "4", "7:30pm", "8:30pm", "9:30pm", equipo6.name, equipo3.name, equipo5.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
+				+games("JORNADA 5", "5", "7:30pm", "8:30pm", "9:30pm", equipo2.name, equipo2.name, equipo5.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")
 	.columnas-12
 		.contenedor-ranking.centerbottom-top
 			h3 RANKING

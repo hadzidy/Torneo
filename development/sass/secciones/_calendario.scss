@@ -5,13 +5,13 @@
 	padding:0 2px 0 2px; 
 }
 .contenedor-calendar{
-	@include span-columns(10);
+	width: 80%;
 	left: 0;
 	right: 0;
 	height: 60%;
 	position: absolute;
-	//background: rgba(0,0,0,0.6);
-	//border: 2px white solid;
+	background: rgba(0,0,0,0.6);
+	border: 2px white solid;
 	padding: 20px 0 20px 20px;
 	vertical-align: middle;
 	min-height: 567px;
@@ -125,5 +125,7 @@
 	font-size: 12px;
 	padding-left: 0;
 } 
-.border {
-}
+
+
+
+// Based on code by Jett Miller jettmiller.net

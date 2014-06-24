@@ -19,7 +19,7 @@ mixin modalEquipos(numero, cap, equipo, integrantes, win, lost)
 				.modal-header
 					button(type="button" data-dismiss="modal" aria-hidden="true").close
 					h4.modal-title#myModalLabel About team
-				.modal-body(id= cap+"Team")		
+				.modal-body(id= cap+"Team")
 					img(src="img/"+cap+".png").team-pic
 					h3= equipo
 					p= integrantes 
@@ -43,7 +43,7 @@ section#equipos.al100
 						+menuEquipos(equipo4.cap, equipo4.name, "4")
 						+menuEquipos(equipo5.cap, equipo5.name, "5")
 						+menuEquipos(equipo6.cap, equipo6.name, "6")
-
+						
 			+modalEquipos("1", equipo1.cap, equipo1.name, integrantesTeam1, "2", "0")
 			+modalEquipos("2", equipo2.cap, equipo2.name, integrantesTeam2, "1", "1")
 			+modalEquipos("3", equipo3.cap, equipo3.name, integrantesTeam3, "1", "1")
