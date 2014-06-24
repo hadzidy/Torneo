@@ -8,17 +8,16 @@
 	width: 80%;
 	left: 0;
 	right: 0;
-	height: 60%;
+	height: 70%;
 	position: absolute;
-	background: rgba(0,0,0,0.6);
 	border: 2px white solid;
 	vertical-align: middle;
 	font-size: 16px;
+
 }
 .calendar-table{
 	padding-left: 20px;
 	border: 1px solid white;
-	background: rgba(0,0,0,0.6);
 }
 .vs{
 	width: 20px;
@@ -125,24 +124,68 @@
 } 
 
 a.is-active{
-	color: red;
+	font-weight: bold;
+	color: white;
+	background-color: rgba(0,0,0,0.6);
 }
-.cont-jour{
-	border: 1px solid white;
-	width: 15%;
+
+.formato-jour{
+	display: block;
+	width: 20%;
 	height: 7.14%;
 	text-align: center;
 	padding-top: 6px;
+	background-color: rgba(0,0,0, 0.9);
 }
-.cont-games{
+.jhgjhg{
 	display: block;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	margin: auto;
 	right: 0;
-	width: 85%;
-	height: 50%;
+	width: 80%;
+	height: 100%;
+	text-align: center;
+	color: white;
+}
+.cont-games{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	right: 0;
+	left: 0;
+	width: 80%;
+	height: 29%;
+	line-height: 25px
+	}
+.date-games{
+	font-size: 22px;
 	text-align: center;
 }
+.team-games{
+
+}
+.hour-games{
+	text-align: center;
+	font-size: 18px;
+}
+.vs-games{
+
+}
+.huhuhu{
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	right: 0;
+	width: 80%;
+	height: 100%;
+	text-align: center;
+	background-color: rgba(0,0,0,0.6);
+
+}
+
 
