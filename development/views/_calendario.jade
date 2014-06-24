@@ -1,5 +1,9 @@
+- var clasCalTeams = ["team-games", "col-md-4", "col-sm-4", "col-xs-5", "border"]
+- var clasCalHour = ['hour-games', 'col-md-3', 'col-sm-3', 'col-xs-12', 'border']
+- var clasCalVs = ['vs-games.col-md-1', 'col-sm-1', 'col-xs-2', 'border']
+- var active = true 
+
 mixin jornadasTits( num, journey, active)
-	- var active = true 
 	a(href="#" rel="tab"+ num class= active?'is-active':'').formato-jour.js-vertical-tab= journey
 		br
 
@@ -10,20 +14,20 @@ mixin games(date,tits ,num ,horario1, horario2, horario3, equipo1, equipo2, equi
 			.date-games= date
 			br
 			div(style="clear: left")
-				div.hour-games.col-md-3.col-sm-3.col-xs-12.border= horario1
-				div.team-games.col-md-4.col-sm-4.col-xs-5.border= equipo1
-				div.vs-games.col-md-1.col-sm-1.col-xs-2.border vs
-				div.team-games.col-md-4.col-sm-4.col-xs-5.border= equipo2
+				div(class=clasCalHour)= horario1
+				div(class=clasCalTeams)= equipo1
+				div(class=clasCalVs) vs
+				div(class=clasCalTeams)= equipo2
 			div(style="clear: left")
-				div.hour-games.col-md-3.col-sm-3.col-xs-12.border= horario2
-				div.team-games.col-md-4.col-sm-4.col-xs-5.border= equipo3
-				div.vs-games.col-md-1.col-sm-1.col-xs-2.border= vs2
-				div.team-games.col-md-4.col-sm-4.col-xs-5.border= equipo4
+				div(class=clasCalHour)= horario2
+				div(class=clasCalTeams)= equipo3
+				div(class=clasCalVs)= vs2
+				div(class=clasCalTeams)= equipo4
 			div(style="clear: left")
-				div.hour-games.col-md-3.col-sm-3.col-xs-12.border= horario3
-				div.team-games.col-sm-4.col-xs-5.border= equipo5
-				div.vs-games.col-md-1.col-sm-1.col-xs-2.border= vs3
-				div.team-games.col-md-4.col-sm-4.col-xs-5.border= equipo6
+				div(class=clasCalHour)= horario3
+				div(class=clasCalTeams)= equipo5
+				div(class=clasCalVs)= vs3
+				div(class=clasCalTeams)= equipo6
 
 mixin ranking(puesto, equipo, color)
 	.contenedor-mov.black
@@ -48,7 +52,7 @@ section#calendario.al100.page-scroll
 			+jornadasTits("11", "POR EL HONOR", false)
 			+jornadasTits("12", "SEMIFINALES", false)
 			+jornadasTits("13", "POR EL 3er LUGAR", false)
-			+jornadasTits("14", "FINAL", false)												
+			+jornadasTits("14", "FINAL", false)
 			.vertical-tab-content-container
 				.huhuhu
 				+games("LUNES 16 de Junio","JORNADA 1", "1", horarios.uno, horarios.dos, horarios.tres, equipo1.name, equipo2.name, equipo3.name, equipo4.name, equipo5.name, equipo6.name, "vs", "vs", "vs")

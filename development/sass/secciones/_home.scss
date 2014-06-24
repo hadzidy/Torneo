@@ -17,25 +17,25 @@
 	height: 100%;
 
 	.title{
-		background: url('../img/title-black.png') no-repeat;
+		background: url('../img/titleResponsive.png') no-repeat;
 		position: absolute;
 		height: 187px;
-		width: 327px;
+		width: 386px;
 		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0; 
 		margin: auto;
+		@include media(min-height 0px max-height 615px){
+			background-size: 263.537px 120px;
+			width: 264px;
+			height: 121px;
+			bottom: 0;
+		}
 		@include media(max-width 1110px){
 			top: 25%;
 			bottom: 50%;
 		}
-		@include media(min-height 0px max-height 999px){
-			background: url('../img/titleResponsive.png') no-repeat;
-			width: 490px;
-
-		} 
-
 		a{
 			z-index: 10;
 			margin-top: 200px;
