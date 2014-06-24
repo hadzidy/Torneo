@@ -201,7 +201,10 @@
 	margin: auto;
 }
 .white-black{
-	color: white;
-	background: black;
 	text-align: center;
+	border-top: solid 2px white;
+	padding-top: 3px;
+}
+.negro-opaco{
+	background-color: rgba(0,0,0,0.7)
 }
