@@ -29,16 +29,18 @@
 		@include media(max-width 1110px){
 			top: 25%;
 			bottom: 50%;
-		} 
+		}
 		@include media(min-height 0px max-height 999px){
 			background: url('../img/titleResponsive.png') no-repeat;
-	}
+			width: 490px;
 
-	a{
-		z-index: 10;
-		margin-top: 200px;
+		} 
+
+		a{
+			z-index: 10;
+			margin-top: 200px;
+		}
 	}
-}
 }
 
 .menu-partidos-week{
