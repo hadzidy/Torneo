@@ -1,0 +1,11 @@
+mixin ranking(puesto, equipo, color)
+	.contenedores-resp-rank.black(class= color )
+		.puesto-resp= puesto
+		.equipos-ranki-resp= equipo			
+
++ranking("1º", equipo1.name, "lun")
++ranking("2º", equipo3.name, "lun")
++ranking("3º", equipo6.name, "mar")
++ranking("4º", equipo2.name, "mar")
++ranking("5º", equipo5.name, "jue")
++ranking("6º", equipo4.name, "jue")

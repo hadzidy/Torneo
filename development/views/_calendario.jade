@@ -1,5 +1,3 @@
-- var classtdMain = ['pad-table', 'non-border', 'limit']
-- var classtdEspecific = ['pad-con-table', 'non-border']
 mixin jornadasTits( num, journey)
 	a(href="#" rel="tab"+ num).formato-jour.js-vertical-tab= journey
 		br
@@ -77,3 +75,6 @@ section#calendario.al100.page-scroll.total-container
 			+ranking("4to LUGAR", equipo2.name, "mar")
 			+ranking("5to LUGAR", equipo5.name, "jue")
 			+ranking("6to LUGAR", equipo4.name, "jue")
+		.contenedor-ranking-resp.centerbottom-top
+			h3 RANKING
+			include partials/_resp-ranking

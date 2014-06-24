@@ -4635,6 +4635,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
+	"\/development\/views\/partials\/_resp-ranking.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/development\/views\/partials\/_resp-ranking.jade",
+		"outputAbbreviatedPath": "\/public\/_resp-ranking.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
 	"\/development\/views\/partials\/_responsive.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
