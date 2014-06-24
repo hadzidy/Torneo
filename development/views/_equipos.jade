@@ -22,7 +22,8 @@ mixin modalEquipos(numero, cap, equipo, integrantes, win, lost)
 				.modal-body(id= cap+"Team")
 					img(src="img/"+cap+".png").team-pic
 					h3= equipo
-					p= integrantes 
+					p= integrantes
+					br 
 					.float-L.partidos= pg
 						.score.font-24px= win
 					.float-R.partidos= pl

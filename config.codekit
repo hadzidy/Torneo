@@ -4697,6 +4697,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/public\/img\/calendar.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/public\/img\/calendar.jpg",
+		"outputAbbreviatedPath": "\/public\/img\/calendar.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/img\/calendar2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3.10862e+06,
+		"inputAbbreviatedPath": "\/public\/img\/calendar2.jpg",
+		"outputAbbreviatedPath": "\/public\/img\/calendar2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/public\/img\/cancha.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
